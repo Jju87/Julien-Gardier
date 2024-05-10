@@ -1,0 +1,98 @@
+@import '../../Styles/variables.scss';
+
+@keyframes blink {
+    from, to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: white;    
+    }
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+@keyframes morph {
+    0% { border-radius: 41% 59% 53% 47% / 30% 64% 36% 70%; }
+    37% { border-radius: 100% 78% 70% 100% / 71% 65% 94% 94% ; }
+    59% { border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%; }
+    79% { border-radius: 81% 78% 100% 73% / 90% 83% 87% 64%  ; }
+    100% { border-radius: 41% 59% 53% 47% / 30% 64% 36% 70%; }
+}
+
+.header-content{
+margin: auto;
+width: 75%;
+height: 480px;
+max-width: 1200px;
+display: flex;
+    .introduction{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        &__welcome{
+            letter-spacing: 0.03em;
+            opacity: 0;
+            font-size: 1.7rem;
+            font-weight: 600;
+            animation: appear ease 300ms 500ms forwards;
+        }
+        &__name{
+            letter-spacing: 0.03em;
+            opacity: 0;
+            font-size: 3.6rem;
+            animation: appear ease 500ms 900ms forwards;
+            span {
+                color: $secondary-color;
+                font-size: 3.6rem;
+                letter-spacing: 0.03em;
+                font-weight:700;
+
+            }
+        }
+        &__skills{
+            font-size: 2.4rem;
+            border-right: 0.12em solid white;
+            letter-spacing: 0.07em;
+            font-weight: 700;
+            display: block;
+            animation: blink 1s step-end infinite;
+            &--transparent{
+                color: #6789BA;
+                font-weight:700;
+                font-size: 2.4rem;
+                border-color: transparent;
+            }
+        }
+    }
+    .portrait-container{
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &__frame{
+            height: 360px;
+            width: 264px;
+            border: 1.5px solid white;
+            overflow: hidden;
+            border-radius: 41% 59% 53% 47% / 30% 64% 36% 70% ;
+            animation: morph ease-in-out 12s infinite;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+            &--portrait2{
+                height: 360px;
+                width: 264px;
+                filter:drop-shadow(20px 10px 20px rgba(0,0,0,0.7));
+            }
+        }         
+    }
+
+}

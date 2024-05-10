@@ -1,0 +1,44 @@
+@import "../../Styles/variables.scss";
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(103,137,186);
+    background: linear-gradient(159deg, rgba(103,137,186,1) 50%, rgba(166,104,193,0.9948354341736695) 100%); 
+    nav{
+        margin: auto;
+        width: 75%;
+        max-width: 1200px;
+        display: flex;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            width: 171px;
+            height: 50px;
+            }
+        ul{
+            width: 450px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: white;
+            justify-content: space-between;
+            li{
+                font-size: 1.6rem;
+                width: 75px;
+                text-align: end;
+            }
+            li:hover{
+                color: $secondary-color;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+                display: flex;
+                margin-left: auto;
+                
+            }
+        }
+    }
+}
