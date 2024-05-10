@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import portrait from '../../Assets/Images/portrait.jpg'
 import portrait2 from '../../Assets/Images/Portrait-fond-transparent.png'
-
+import SkillsBox from '../SkillsBox/SkillsBox.jsx'
 import './headercontent.scss';
 
 function HeaderContent() {
@@ -26,7 +26,8 @@ function HeaderContent() {
     }, []);
 
     useEffect(() => {
-        if (!isAnimationStarted) return; // Ne rien faire tant que l'animation n'a pas démarré
+        if (!isAnimationStarted) 
+            return; // Ne rien faire tant que l'animation n'a pas démarré
 
         const animationTimer = setInterval(() => {
             if (isDeleting) {
@@ -64,6 +65,9 @@ function HeaderContent() {
             <img src={portrait2} className="portrait-container__frame--portrait2" alt="portrait de Julien Gardier, développeur web"/>
         </div>
         <div className="portrait-container__strengths">
+            < SkillsBox 
+                
+            />
         </div>
       </div>
     </section>
