@@ -4,19 +4,16 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from './Pages/Home/Home';
-import Header from './Layout/Header/Header';
 
 import '../src/Styles/main.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <React.StrictMode>
-        <Router>
-            <Header />
-            <main>
+        <Router>         
                 <Routes>
                     <Route path="/" element={<Home />} />
-                </Routes>
-            </main>
+                    <Route path="/eng/" element={<Home />} />
+                </Routes>          
         </Router>
     </React.StrictMode>
 );

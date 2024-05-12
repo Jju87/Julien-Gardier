@@ -1,0 +1,35 @@
+@import "../../Styles/variables.scss";
+
+.skillsbox{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border: 1px solid rgba(255,255,255,1);
+    border-radius: 13px;
+    background: rgb(227,189,255);
+    background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,1) 31%);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 13px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    z-index: 1;
+    .cross{
+        width: 20px;
+        height: 20px;
+        color: #fff;
+    }
+    p{  
+        padding: 2px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        background: linear-gradient(159deg, $primary-color 50%, rgba(166,104,193,0.9948354341736695) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+
+    }
+}

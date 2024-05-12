@@ -4,7 +4,7 @@ header{
     width: 100vw;
     height: 100vh;
     background: rgb(103,137,186);
-    background: linear-gradient(159deg, rgba(103,137,186,1) 50%, rgba(166,104,193,0.9948354341736695) 100%); 
+    background: linear-gradient(159deg, $primary-color 50%, rgba(166,104,193,0.9948354341736695) 100%);
     nav{
         margin: auto;
         width: 75%;
@@ -37,7 +37,6 @@ header{
                 height: 20px;
                 display: flex;
                 margin-left: auto;
-                
             }
         }
     }

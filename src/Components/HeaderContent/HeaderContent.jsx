@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import portrait from '../../Assets/Images/portrait.jpg'
 import portrait2 from '../../Assets/Images/Portrait-fond-transparent.png'
-import SkillsBox from '../SkillsBox/SkillsBox.jsx'
+import SkillsBox from '../SkillsBox/SkillsBox.jsx';
 import './headercontent.scss';
 
 function HeaderContent() {
@@ -66,7 +65,13 @@ function HeaderContent() {
         </div>
         <div className="portrait-container__strengths">
             < SkillsBox 
-                
+                textInBox="Souci du détail"
+            />
+            < SkillsBox 
+                textInBox="Travail d'équipe"
+            />
+            < SkillsBox 
+                textInBox="Responsive design"
             />
         </div>
       </div>

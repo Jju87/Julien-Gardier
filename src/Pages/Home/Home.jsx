@@ -1,7 +1,10 @@
+import '../../Layout/Header/Header';
+import Header from '../../Layout/Header/Header';
+
 function Home() {
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="home">
+            <Header />
         </div>
     );
 }

@@ -28,11 +28,11 @@
 }
 
 .header-content{
-margin: auto;
-width: 75%;
-height: 480px;
-max-width: 1200px;
-display: flex;
+    margin: auto;
+    width: 75%;
+    height: 480px;
+    max-width: 1200px;
+    display: flex;
     .introduction{
         width: 50%;
         display: flex;
@@ -79,6 +79,7 @@ display: flex;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        position: relative;
         &__frame{
             height: 360px;
             width: 264px;
@@ -87,12 +88,26 @@ display: flex;
             border-radius: 41% 59% 53% 47% / 30% 64% 36% 70% ;
             animation: morph ease-in-out 12s infinite;
             box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+            z-index: 0;
+            box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5);            
             &--portrait2{
                 height: 360px;
                 width: 264px;
                 filter:drop-shadow(20px 10px 20px rgba(0,0,0,0.7));
             }
-        }         
+        }  
+        .portrait-container__strengths{
+            position: absolute;
+            top:0;
+            left:252px;
+            width: 400px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+        }       
     }
 
 }
