@@ -1,0 +1,59 @@
+@import "../../../Styles/variables.scss";
+
+.a-propos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-color: #f5f5f5;
+    
+    & h2{
+    color: $primary-color;
+    font-size: 2.5rem;
+    }
+    &__content{
+        display: flex;
+        width: 75%;
+        max-width: 1200px;
+        height: auto;
+        justify-content: center;
+        align-items: center; 
+        overflow: hidden;
+        &--pictures{
+            width: 50%;
+            position: relative;
+            height:100%;
+            overflow: hidden;
+            height: 500px;
+            transition: transform 0.5s ease;
+            &-selfie{
+                width: 257px;
+                height: 350px;
+                border-radius: 10px;
+                position: absolute;
+                top: 18px;
+                left: 18px;
+            }
+            &-bateau{
+                width:263;
+                height: 350px;
+                border-radius: 10px;
+                position: absolute;
+                bottom: 18px;
+                right: 18px;
+            }
+        }
+        &--text{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            p{
+                color: $primary-color;
+            }
+        }
+    }
+}

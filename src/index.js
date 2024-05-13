@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 // Import de la fonctionnalité de routage
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from './Pages/Home/Home';
+import Accueil from './Pages/Accueil/Accueil';
 
 import '../src/Styles/main.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,8 +11,8 @@ root.render(
 <React.StrictMode>
         <Router>         
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/eng/" element={<Home />} />
+                    <Route path="/" element={<Accueil />} />
+                    <Route path="/eng/" element={<Accueil />} />
                 </Routes>          
         </Router>
     </React.StrictMode>
