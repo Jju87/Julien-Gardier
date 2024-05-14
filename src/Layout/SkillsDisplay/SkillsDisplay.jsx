@@ -27,7 +27,8 @@ function SkillsDisplay() {
     ];
     const allIcons = [...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons,
         ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons,
-        ]
+        ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons, ...icons,
+        ...icons, ...icons]
     
     return (
         <section className="skills-display">
