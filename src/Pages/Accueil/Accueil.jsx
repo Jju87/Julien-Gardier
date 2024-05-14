@@ -2,6 +2,7 @@ import '../../Layout/Francais/Header/Header';
 import Header from '../../Layout/Francais/Header/Header';
 import HeaderContent from '../../Components/HeaderContent/HeaderContent';
 import Apropos from '../../Layout/Francais/Apropos/Apropos';
+import SkillsDisplay from '../../Layout/SkillsDisplay/SkillsDisplay'
 
 function Accueil() {
     return (
@@ -10,6 +11,7 @@ function Accueil() {
                 <HeaderContent />
             </Header>
             <Apropos /> 
+            <SkillsDisplay />
         </div>
     );
 }

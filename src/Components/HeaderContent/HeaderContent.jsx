@@ -19,7 +19,7 @@ function HeaderContent() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsAnimationStarted(true); // Mettre à jour l'état pour indiquer que l'animation peut commencer
-        }, 1000); // Délai de 2 secondes avant de démarrer l'animation
+        }, 2000); // Délai de 2 secondes avant de démarrer l'animation
 
         return () => clearTimeout(timer);
     }, []);
