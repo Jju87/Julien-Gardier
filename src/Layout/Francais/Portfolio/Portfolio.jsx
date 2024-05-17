@@ -1,7 +1,5 @@
 import './portfolio.scss';
-import Card from '../../../Components/Card/Card';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
+import Card from '../../../Components/Card/CardCarousel';
 
 
 function Portfolio() {
@@ -18,10 +16,6 @@ function Portfolio() {
                 </ div>
                 <div className="portfolio__content--cards">
                     < Card />
-                </div>
-                <div className="portfolio__content--arrows" >
-                    <FontAwesomeIcon icon={faCircleChevronLeft} />
-                    <FontAwesomeIcon icon={faCircleChevronRight} />
                 </div>
             </div>
         </div>

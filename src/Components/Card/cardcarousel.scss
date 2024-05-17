@@ -1,0 +1,316 @@
+@import "../../Styles/variables.scss";
+
+.card-group {
+  visibility:hidden;
+  will-change: transform, visibility;
+  &.active {
+      visibility: visible;
+  }
+}
+.card-group[data-status="active"] {
+  transition-delay: 300ms;
+}
+
+.card-group[data-status="after"] {
+  transform: translateX(50%) scale(0);
+}
+
+.card-group[data-status="before"] {
+  transform: translateX(-50%) scale(0);
+}
+
+.card-group[data-status="becoming-active-from-after"] {
+  transform: translateX(50%) scale(0);
+  transition: none;
+}
+
+.card-group[data-status="becoming-active-from-before"] {
+  transform: translateX(-50%) scale(0);
+  transition: none;
+}
+
+.card-groups,
+.card-group,
+.big-card {  
+  overflow: hidden;
+  width: 40vmin;
+  max-width: 100%;
+}
+.card-groups{
+.card-group {
+    transition: transform 400ms ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .card{
+        position: absolute;
+        transition: transform 800ms cubic-bezier(.05,.43,.25,.95);
+    }
+    .big-card {
+      border-radius: 1vmin;
+      position: absolute;
+      transition: ease 800ms;
+      left: 38%;
+      top: 20%;
+      border: 1px solid rgb(247, 246, 246, 0.6);
+      aspect-ratio: 14.5 / 10;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0vmin 1vmin 2vmin rgba(255, 255, 255, 0.49);
+      &:nth-child(2) {
+          background-image: url("../../Assets/Portfolio/Kasa/Kasa-gif.gif");
+          transform: translateX(-10%) rotate(-1deg) scale(0.7);
+          padding: 2px;
+      }
+        
+      &:nth-child(4) {
+          background-image: url("../../Assets/Portfolio/Kasa/Kasa-desktop.webp");
+          transform: rotate(2deg);
+      }
+        
+      &:nth-child(6) {
+        background-color: rgb(250, 247, 247, 0.86);
+        background-image: url("../../Assets/Portfolio/Kasa/Kasa-logement.PNG");
+        transform: translateX(-6%) rotate(-3deg);
+        background-origin: content-box;
+        padding-top: 10px;
+      }
+        
+      &:nth-child(8) {
+          background-image: url("../../Assets/Portfolio/Kasa/kasa-banner.png");
+          transform: translate(10%, 3%) rotate(5deg);
+      }
+  
+        &.group-1{
+          &:nth-child(2) {
+            background-image: url("../../Assets/Portfolio/Bluel/Bluel-gif.gif");
+            padding: 2px;
+        }
+
+        &:nth-child(4) {
+            background-image: url("../../Assets/Portfolio/Bluel/Bluel-add.PNG");
+            background-repeat: no-repeat;
+            background-color: white;
+            background-origin: content-box;
+            padding: 8px;
+        }
+        &:nth-child(6) {
+          background-color: rgb(250, 247, 247, 0.86);
+          background-image: url("../../Assets/Portfolio/Bluel/Bluel-mobile.PNG");
+          background-origin: content-box;
+          padding-top: 10px;
+
+        }
+        &:nth-child(8) {
+            background-image: url("../../Assets/Portfolio/Bluel/Bluel-logo.PNG");
+            background-repeat: no-repeat;
+        }
+      }
+        &.group-2{
+          &:nth-child(2) {
+            background-image: url("../../Assets/Portfolio/Kasa/Kasa-gif.gif");
+            padding: 2px;
+        }
+        &:nth-child(4) {
+            background-image: url("../../Assets/Portfolio/Kasa/Kasa-desktop.webp");
+        }
+        &:nth-child(6) {
+          background-color: rgb(250, 247, 247, 0.86);
+          background-image: url("../../Assets/Portfolio/Kasa/Kasa-logement.PNG");
+          background-origin: content-box;
+          padding-top: 10px;
+
+        }
+        &:nth-child(8) {
+            background-image: url("../../Assets/Portfolio/Kasa/kasa-banner.png");
+        }
+      }
+        &.group-3{
+          &:nth-child(2) {
+            background-image: url("../../Assets/Portfolio/Kasa/Kasa-gif.gif");
+            padding: 2px;
+        }
+
+        &:nth-child(4) {
+            background-image: url("../../Assets/Portfolio/Kasa/Kasa-desktop.webp");
+        }
+        &:nth-child(6) {
+          background-color: rgb(250, 247, 247, 0.86);
+          background-image: url("../../Assets/Portfolio/Kasa/Kasa-logement.PNG");
+          background-origin: content-box;
+          padding-top: 10px;
+        }
+        &:nth-child(8) {
+            background-image: url("../../Assets/Portfolio/Kasa/kasa-banner.png");
+        }
+      }
+        &.group-4{
+          &:nth-child(2) {
+            background-image: url("../../Assets/Portfolio/Kasa/Kasa-gif.gif");
+            padding: 2px;
+        }
+
+        &:nth-child(4) {
+            background-image: url("../../Assets/Portfolio/Kasa/Kasa-desktop.webp");
+        }
+        &:nth-child(6) {
+          background-color: rgb(250, 247, 247, 0.86);
+          background-image: url("../../Assets/Portfolio/Kasa/Kasa-logement.PNG");
+          background-origin: content-box;
+          padding-top: 10px;
+        }
+        &:nth-child(8) {
+            background-image: url("../../Assets/Portfolio/Kasa/kasa-banner.png");
+        }
+      }
+    }
+    .little-card {
+        width: 12vmin;
+        border-radius: 2vmin;
+        left: 50%;
+        top: 44%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0vmin 1vmin 2vmin rgba(255, 255, 255, 0.49);
+        pointer-events: none;
+        aspect-ratio: 7 / 7;
+        border: 1px solid white;
+        background: rgba(206, 205, 205, 0.445);
+        filter: blur(0.6px);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        padding: 5px;
+        &.group-0{
+          &:nth-child(1) {
+              background-image: url("../../Assets/Icons/html-icon.svg");
+          }  
+          &:nth-child(3) {
+              background-image: url("../../Assets/Icons/sass-icon.svg");
+          }
+          &:nth-child(5) {
+              background-image: url("../../Assets/Icons/figma.svg");
+          }
+          &:nth-child(7) {
+              background-image: url("../../Assets/Icons/react-icon.svg");
+          }
+        }
+        &.group-1{
+          &:nth-child(1) {
+              background-image: url("../../Assets/Icons/html-icon.svg");
+          }  
+          &:nth-child(3) {
+              background-image: url("../../Assets/Icons/sass-icon.svg");
+          }
+          &:nth-child(5) {
+              background-image: url("../../Assets/Icons/figma.svg");
+          }
+          &:nth-child(7) {
+              background-image: url("../../Assets/Icons/react-icon.svg");
+          }
+        }
+        &.group-2{
+          &:nth-child(1) {
+              background-image: url("../../Assets/Icons/html-icon.svg");
+          }  
+          &:nth-child(3) {
+              background-image: url("../../Assets/Icons/sass-icon.svg");
+          }
+          &:nth-child(5) {
+              background-image: url("../../Assets/Icons/figma.svg");
+          }
+          &:nth-child(7) {
+              background-image: url("../../Assets/Icons/react-icon.svg");
+          }
+        }
+        &.group-3{
+          &:nth-child(1) {
+              background-image: url("../../Assets/Icons/html-icon.svg");
+          }  
+          &:nth-child(3) {
+              background-image: url("../../Assets/Icons/sass-icon.svg");
+          }
+          &:nth-child(5) {
+              background-image: url("../../Assets/Icons/figma.svg");
+          }
+          &:nth-child(7) {
+              background-image: url("../../Assets/Icons/react-icon.svg");
+          }
+        }
+        &.group-4{
+          &:nth-child(1) {
+              background-image: url("../../Assets/Icons/html-icon.svg");
+          }  
+          &:nth-child(3) {
+              background-image: url("../../Assets/Icons/sass-icon.svg");
+          }
+          &:nth-child(5) {
+              background-image: url("../../Assets/Icons/figma.svg");
+          }
+          &:nth-child(7) {
+              background-image: url("../../Assets/Icons/react-icon.svg");
+          }
+        }
+    }
+}
+& .arrows{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 20px;
+    height: 65px;
+    font-size: 4.6rem;
+    width: 100%;
+    margin-top: 0px;
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+    &__left{
+        cursor: pointer;
+    }
+    &__right{
+        cursor: pointer;
+    }
+}
+}
+
+
+
+.card-group:hover > .card {  
+  box-shadow: -1vmin 2vmin 5vmin rgba(255, 255, 255, 0.149);
+}
+
+.card-group:hover > .big-card:nth-child(2) {
+  transform: translate(-75%, 16%) rotate(-24deg) scale(1);
+}
+
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translate(-5%, -38%) rotate(-8deg);
+}
+
+.card-group:hover > .big-card:nth-child(6) {
+  transform: translate(2%, 50%) rotate(8deg);
+}
+
+.card-group:hover > .big-card:nth-child(8) {
+  transform: translate(68%, 26%) rotate(24deg);
+}
+
+.card-group:hover > .little-card:nth-child(1) {
+  transform: translate(200%, -160%) rotate(-15deg);
+  
+}
+
+.card-group:hover > .little-card:nth-child(3) {
+  transform: translate(160%, 170%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(5) {
+  transform: translate(-200%, -170%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(7) {
+  transform: translate(-280%, 140%) rotate(-15deg);
+}
+
+
