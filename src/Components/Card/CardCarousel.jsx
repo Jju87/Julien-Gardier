@@ -3,49 +3,67 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-function CardCarousel() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const totalGroups = 5; 
+function CardCarousel({ filter}) {
+    const totalGroups = 5;
 
-    const [status, setStatus] = useState(Array(totalGroups).fill('after')); // Initialise le statut de chaque groupe de cartes
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [visibleGroups, setVisibleGroups] = useState([]);
+
+    const isGroupVisible = (filter, index) => {
+        if (filter === 'Tout') return true;
+        if (filter === 'Frontend' && (index === 0 || index === 3)) return true;
+        if (filter === 'Backend' && (index === 1 || index === 2)) return true;
+        if (filter === 'Optimisation' && index === 4) return true;
+        return false;
+    };
 
     useEffect(() => {
-        let newStatus = [...status];
-        newStatus = newStatus.map((_, index) => {
-            if (index < currentIndex) return 'before';
-            if (index > currentIndex) return 'after';
-            return 'active';
-        });
-        setStatus(newStatus);
-    }, [currentIndex]);
+        const updatedVisibleGroups = [];
+        for (let i = 0; i < totalGroups; i++) {
+            if (isGroupVisible(filter, i)) {
+                updatedVisibleGroups.push(i);
+            }
+        }
+        setVisibleGroups(updatedVisibleGroups);
+        setCurrentIndex(0); // Reset currentIndex when filter changes
+    }, [filter]);
 
     const handleLeftClick = () => {
-        setCurrentIndex(oldIndex => oldIndex === 0 ? totalGroups - 1 : oldIndex - 1);
+        setCurrentIndex(oldIndex => oldIndex === 0 ? visibleGroups.length - 1 : oldIndex - 1);
     };
 
     const handleRightClick = () => {
-        setCurrentIndex(oldIndex => oldIndex === totalGroups - 1 ? 0 : oldIndex + 1);
+        setCurrentIndex(oldIndex => oldIndex === visibleGroups.length - 1 ? 0 : oldIndex + 1);
     };
-    
+
     return (
-        <div className="card-groups">
-            {status.map((status, index) => (
-                <div className={`card-group ${status}`} data-status={status} data-index={index} key={index}>
-                    <div className={`little-card card group-${index}`}></div>
-                    <div className={`big-card card group-${index}`}></div>
-                    <div className={`little-card card group-${index}`}></div>
-                    <div className={`big-card card group-${index}`}></div>
-                    <div className={`little-card card group-${index}`}></div>
-                    <div className={`big-card card group-${index}`}></div>
-                    <div className={`little-card card group-${index}`}></div>
-                    <div className={`big-card card group-${index}`}></div>
+        <>
+            <div className="card-groups">
+                {visibleGroups.map((index, visibleIndex) => (
+                    <div className={
+                        `card-group ${visibleIndex === currentIndex ? 'active' : ''}`} 
+                        data-status={visibleIndex === currentIndex ? 'active' : visibleIndex < currentIndex ? 'before' : 'after'} 
+                        key={index}
+                        >
+                        <div className={`little-card card group-${index}`}></div>
+                        <div className={`big-card card group-${index}`}></div>
+                        <div className={`little-card card group-${index}`}></div>
+                        <div className={`big-card card group-${index}`}></div>
+                        <div className={`little-card card group-${index}`}></div>
+                        <div className={`big-card card group-${index}`}></div>
+                        <div className={`little-card card group-${index}`}></div>
+                        <div className={`big-card card group-${index}`}></div>
+                    </div>
+                ))}
+                <div className={visibleGroups.length > 1 ? "arrows" : "arrows__hidden"}>
+                    <FontAwesomeIcon className="arrows__left" icon={faCircleChevronLeft} onClick={handleLeftClick} />
+                    <FontAwesomeIcon className="arrows__right" icon={faCircleChevronRight} onClick={handleRightClick} />
                 </div>
-            ))}
-            <div className="arrows">
-                <FontAwesomeIcon className="arrows__left" icon={faCircleChevronLeft} onClick={handleLeftClick} />
-                <FontAwesomeIcon className="arrows__right" icon={faCircleChevronRight} onClick={handleRightClick} />
             </div>
-        </div>
+            <span className="counter">
+                {currentIndex + 1} / {visibleGroups.length}
+            </span>
+        </>
     );
 }
 

@@ -1,21 +1,30 @@
 import './portfolio.scss';
+import React, { useState } from 'react';
 import CardCarousel from '../../../Components/Card/CardCarousel';
 
 
 function Portfolio() {
+    const [filter,setFilter] = useState('Tout');
+
+    const handleFilter = (newFilter) => {
+        setFilter(newFilter);
+    }
+
   return (
     <section id="portfolio" className="portfolio">
         <div className="portfolio__container">
             <div className="portfolio__content">
                 <h2>Portfolio</ h2>
                 <div className="portfolio__content--filters">
-                    <button>Tout</button>
-                    <button>Frontend</button>
-                    <button>Backend</button>
-                    <button>Optimisation</button>
+                    <button className={filter === 'Tout' ? 'active' : ''} onClick={() => handleFilter('Tout')} >Tout</button>
+                    <button className={filter === 'Backend' ? 'active' : ''} onClick={() => handleFilter('Backend')}>Back-end</button>
+                    <button className={filter === 'Frontend' ? 'active' : ''} onClick={() => handleFilter('Frontend')}>Front-end</button>
+                    <button className={filter === 'Optimisation' ? 'active' : ''} onClick={() => handleFilter('Optimisation')}>Optimisation</button>                
                 </ div>
                 <div className="portfolio__content--cards">
-                    < CardCarousel />
+                    < CardCarousel 
+                        filter={filter}
+                    />
                 </div>
             </div>
         </div>

@@ -283,6 +283,7 @@
     }
 }
 & .arrows{
+    visibility: visible;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -313,6 +314,9 @@
         &:active{
             color: rgb(253,235, 225,0.8);
         }
+    }
+    &__hidden{
+        visibility: hidden;
     }
 }
 }
@@ -356,3 +360,16 @@
 }
 
 
+.counter{
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 25px;
+  font-size: 1.6rem;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 58px;
+}
