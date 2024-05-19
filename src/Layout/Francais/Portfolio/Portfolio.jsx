@@ -1,5 +1,5 @@
 import './portfolio.scss';
-import Card from '../../../Components/Card/CardCarousel';
+import CardCarousel from '../../../Components/Card/CardCarousel';
 
 
 function Portfolio() {
@@ -15,7 +15,7 @@ function Portfolio() {
                     <button>Optimisation</button>
                 </ div>
                 <div className="portfolio__content--cards">
-                    < Card />
+                    < CardCarousel />
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-sol
 
 function CardCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalGroups = 5; // Remplacez par le nombre total de groupes de cartes
+    const totalGroups = 5; 
 
     const [status, setStatus] = useState(Array(totalGroups).fill('after')); // Initialise le statut de chaque groupe de cartes
 
