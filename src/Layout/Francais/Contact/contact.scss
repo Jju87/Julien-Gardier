@@ -1,0 +1,152 @@
+@import '../../../Styles/variables.scss';
+
+.contact{
+    width: 100vw;
+    height: 100vh;
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 20px;
+    &__container{
+        width: 75%;
+        height: 100%;
+        max-width: 1200px;
+        position: relative;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        & h2{
+            font-size: 2.5rem;
+            color: $primary-font-color;
+            text-align: center;
+            overflow: hidden;
+        }
+        .contact__content{
+            width: 100%;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            &--form{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                & form{
+                    width: 70%;
+                    height: 85%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    & .inputs{
+                        width: 100%;
+                        height: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content:space-evenly;
+                        &__icon{
+                            color: $primary-color;
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+                & input, textarea{
+                    outline: none;
+                    border:none;
+                    width: 100%;
+                    height: 50px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border-bottom: 1px solid #ccc;
+                    border-left: 7px solid $primary-color;
+                    font-size: 1.6rem;
+                    resize: none;
+                    color: $primary-font-color;
+                    font-weight: 500;
+                    font-family: 'montserrat', 'sans-serif';
+                }
+                & input:focus, textarea:focus{
+                    background-color: rgba(255, 252, 49, 0.26);
+                }
+                & textarea{
+                     height: 150px;
+                }
+                & button{
+                     width: 150px;
+                     height: 50px;
+                     background-color: $primary-color;
+                     color: white;
+                     font-size: 1.6rem;
+                     border: none;
+                     border-radius: 10px;
+                     cursor: pointer;
+                     &:hover{
+                        color: $secondary-color;
+                     }
+                     &:active{
+                        color: white;
+                     }
+                }
+            }
+            &--links{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                justify-content: space-evenly;
+                gap: 20px;
+                border: 1px solid yellow;
+                &-socials{
+                    color: $primary-color;
+                    font-size: 4.2rem;
+                    border: 1px solid green;
+                    width: 100%;
+                    height: 150px;
+                }
+                &-phone{
+                    border: 1px solid green;
+                    width: 100%;
+                    height: 150px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    &-icon{
+                        color: $primary-color;
+                        font-size: 4.2rem;
+                    }
+                    & button{
+                        width: 150px;
+                        height: 50px;
+                        background-color: $primary-color;
+                        color: white;
+                        font-size: 1.6rem;
+                        border: none;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        &:hover{
+                            color: $secondary-color;
+                        }
+                        &:active{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+                    

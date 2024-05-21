@@ -30,12 +30,12 @@
     }, []);
 
     return (
-        <header id="header">
+        <header id="accueil">
             <nav className={isFixed ? 'nav-fixed' : ''}>
                 <img className='logo' src={logoHeader} alt="Logo de Julien Gardier, développeur web en Essonne" />
                 <ul>
                     <li>
-                        <a href="#header">Accueil</a>
+                        <a href="#accueil">Accueil</a>
                     </li>
                     <li>
                         <a href="#a-propos">A propos</a>
