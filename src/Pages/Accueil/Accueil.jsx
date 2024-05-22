@@ -5,6 +5,7 @@ import Apropos from '../../Layout/Francais/Apropos/Apropos';
 import SkillsDisplay from '../../Layout/SkillsDisplay/SkillsDisplay'
 import Portfolio from '../../Layout/Francais/Portfolio/Portfolio';
 import Contact from '../../Layout/Francais/Contact/Contact';
+import Footer from "../../Layout/Francais/Footer/Footer";
 import './accueil.scss';
 
 function Accueil() {
@@ -17,6 +18,7 @@ function Accueil() {
             <SkillsDisplay />
             < Portfolio />
             <Contact />
+            <Footer />
         </div>
     );
 }

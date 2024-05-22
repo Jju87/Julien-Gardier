@@ -1,10 +1,10 @@
 import './contact.scss';
+
 import ReCAPTCHA from "react-google-recaptcha";
 import callMeImage from "../../../Assets/Images/call.jpg";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faComments, faPhoneVolume  } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub, faCodepen,} from '@fortawesome/free-brands-svg-icons';
 
 function Contact () {
     return (
@@ -41,17 +41,7 @@ function Contact () {
                             </button>
                             
                         </div>
-                        {/* <div className="contact__content--links-socials">
-                            <a href="www.linkedin.com/in/julien-gardier" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faLinkedin} className="contact__content--socials-icon" />
-                            </a>
-                            <a href="https://github.com/Jju87" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faGithub} className="contact__content--socials-icon" />
-                            </a>
-                            <a href="https://codepen.io/Gr1chk4" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faCodepen} className="contact__content--socials-icon" />
-                            </a>
-                        </div> */}
+                        {/*  */}
                     </div>
                 </div>               
             </div>
