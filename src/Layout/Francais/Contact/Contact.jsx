@@ -1,33 +1,75 @@
 import './contact.scss';
-
+import React, { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from 'emailjs-com';
+
 import callMeImage from "../../../Assets/Images/call.jpg";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faComments, faPhoneVolume  } from '@fortawesome/free-solid-svg-icons';
 
+
 function Contact () {
+
+    const [recaptchaValid, setRecaptchaValid] = useState(false);
+    const [isSending, setIsSending] = useState(false);
+
+    const onRecaptchaChange = (value) => {
+        if (value) {
+            setRecaptchaValid(true);
+        }
+    }
+
+    const [emailResult, setEmailResult] = useState(null);
+
+    const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE , e.target, process.env.REACT_APP_EMAILJS_SERVICE_KEY)
+        .then((result) => {
+            console.log(result.text);
+            setEmailResult(result.text);
+            setIsSending(false);
+            e.target.reset();
+            setTimeout(()=>{
+                setEmailResult(null);
+            
+            },(2700));
+            
+        }, (error) => {
+            console.log(error.text);
+            setEmailResult(error.text);
+            setIsSending(false);
+        });
+}
+
     return (
         <section id="contact" className="contact">
             <div className="contact__container">
                 <h2>Contact</h2>
                 <div className="contact__content">
                     <div className="contact__content--form">
-                        <form action="" method="POST">
+                        <form onSubmit={sendEmail}>
                             <div className="inputs">
                                 <FontAwesomeIcon icon={faEnvelope} className="inputs__icon" />                                
-                                <label htmlFor="nom"></label>
-                                <input type="text" name="nom" id="nom" required placeholder="Votre nom" />
+                                <label htmlFor="from_name"></label>
+                                <input type="text" name="from_name" id="nom" required placeholder="Votre nom" />
                                 <label htmlFor="email"></label>
                                 <input type="email" name="email" id="email" required placeholder="Votre email" />
                                 <label htmlFor="message"></label>
                                 <textarea name="message" id="message" required placeholder="Votre message"></textarea>
                             </div>
-                            <div className="captcha">
-                                <ReCAPTCHA sitekey={process.env.REACT_APP_CAPTCHA_KEY} action='homepage' />
+                            <div className="captcha" style={{overflow: "hidden" }}>
+                                <ReCAPTCHA sitekey={process.env.REACT_APP_CAPTCHA_KEY} action='homepage' onChange={onRecaptchaChange} />
                             </div>                           
-                            <button type="submit">Envoyer</button>
-                        </form>
+                            <button 
+                                type="submit" 
+                                disabled={!recaptchaValid}
+                                className={`submit-button ${recaptchaValid ? '' : 'disabled'}`}
+                            >{isSending ? 'Envoi en cours...' : (emailResult === 'OK' ? 'Message envoyé' : 'Envoyer')}
+                            </button>
+                        </form>                    
                     </div>
                     <div className="contact__content--links">
                         <FontAwesomeIcon className="phone-volume" icon={faPhoneVolume} />
