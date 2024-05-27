@@ -142,16 +142,18 @@
                     justify-content: center;
                     align-items: center;
                     position: relative;
+                    overflow: hidden;
+                    border-radius: 20px;
                     & img{
                         width: 266px;
                         height: 360px;
                         object-fit: cover;
                         border-radius: 20px;
-                        opacity: 0.96;
-                        transition: 00ms ease;
+                        transition: 150ms;
                     }
                     &:hover img{
-                        opacity: 1;
+                        scale:(1.1);
+                        transform: rotate(1deg);
                     }
                 }
                 .phone-btn{
@@ -184,7 +186,7 @@
                             color: $primary-font-color;
                             opacity: 0;
                             transform: translateY(-100px);
-                            transition: 400ms ease;
+                            transition: 200ms ease;
                         }
                     }
                     &:hover a span{

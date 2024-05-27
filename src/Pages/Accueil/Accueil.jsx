@@ -9,6 +9,8 @@ import Footer from "../../Layout/Francais/Footer/Footer";
 import './accueil.scss';
 
 function Accueil() {
+
+
     return (
         <div className="accueil">
             <Header>
