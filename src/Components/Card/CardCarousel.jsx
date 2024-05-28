@@ -85,6 +85,7 @@ function CardCarousel({ filter }) {
                     onClose={() => setIsModalOpen(false)}
                     modalContent={modalContent}
                     projectId={selectedProjectId}
+                    title={projectsContent[selectedProjectId].title}
                 />
             )}
         </>

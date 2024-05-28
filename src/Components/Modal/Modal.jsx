@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import './modal.scss';
 import '../../Styles/basics.scss'
 
-function Modal({ isModalOpen, onClose, modalContent, projectId }) {
+function Modal({ isModalOpen, onClose, modalContent, projectId, title }) {
     const modalRef = useRef();
 
     useEffect(() => {
@@ -18,16 +20,14 @@ function Modal({ isModalOpen, onClose, modalContent, projectId }) {
         };
     }, [onClose]);
 
-    document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
-
-
-    if (!isModalOpen) return null;
+    document.body.style.overflowY= isModalOpen ? 'hidden' : 'auto';
 
     return (
-        <div className={`modal open modal-${projectId}`} >
+        <div className={`modal ${isModalOpen ? 'open' : ''} modal-${projectId}`} >
             <div className="modal__content" ref={modalRef}>
                 <div className="modal__content--header">
-                    <button onClick={onClose}>X</button>
+                    <h2>{title}</h2>
+                    <button onClick={onClose}><FontAwesomeIcon icon={faXmark} /></button>
                 </div>
                 <div className="modal__content--body">
                     {modalContent}

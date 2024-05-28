@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .modal {
     position: fixed;
     top: 0;
@@ -7,28 +9,110 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-
+    backdrop-filter: blur(5px);
+    background-color: rgba(34, 33, 33, 0.1);
+    transition: 100ms ease-in-out;
+    visibility: hidden;
+    transform: scale(0);
     &.open {
         opacity: 1;
         pointer-events: all;
+        visibility: visible;
+        transform: scale(1);
     }
 
     &.modal-0 {
         .modal__content {
-            background-color: #f0f0f0;
-            border: 2px solid #333;
+            background-color: white;
+            &--header {
+                & h2 {
+                    font-size: 2rem;
+                    color: #FF6060;
+                    overflow: hidden;
+                }
+                & button{
+                    color: #FF6060;
+                    opacity: 0.9;
+                }
+            }
+            &--body{
+                width: 100%;
+                .projects-container{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    &__mobile{
+                        height: 100%;
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        visibility: visible;
+                        & img{
+                            width: 500px;
+                            height: auto;
+                            object-fit: cover;
+                            position: relative;
+                        }
+                        & iframe{
+                            position: absolute;
+                            top: 194px;
+                            left: 84px;
+                            z-index: 1001;
+                            scrollbar-width: thin;
+                            width: 352px;
+                            height: 220px;
+                        }
+                    }
+
+                    &__text{
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        padding: 20px;
+                        text-align: start;
+                        & h3{
+                            font-size: 1.5rem;
+                            color: #FF6060;
+                            margin-bottom: 4px;
+                            text-align: justify;
+                        }
+                        & p{
+                            color: #FF6060;
+                            font-size: 1.3rem;
+                            text-align: justify;
+                        }
+                        & ul li{
+                            margin-left: 20px;
+                            color: #FF6060;
+                            font-size: 1.3rem;
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
         }
     }
 
     &.modal-1 {
         .modal__content {
-            background-color: #ffebcd;
-            border: 2px solid #ff4500;
+            &--header{
+                & h2 {
+                    font-size: 1.8rem;
+                    color: #B1663C;
+                    overflow: hidden;
+                }
+                & button{
+                    color: #B1663C;
+                    opacity: 0.9;
+                }
+                
+            }
         }
     }
 
@@ -55,22 +139,44 @@
 }
 
 .modal__content {
-    background-color: white;
+    background-color: $background-color;
     padding: 20px;
-    border-radius: 5px;
-    max-width: 600px;
-    width: 100%;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
     position: relative;
     opacity: 1;
     pointer-events: all;
-}
-
-.modal__content--header {
+    height: 98%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 
+.modal__content--header {
+    width: 100%;
+    & h2 {
+        overflow: hidden;
+        margin:0;    
+        padding:0;
+        text-align: center;
+    }
+    & button{
+        font-size: 2.5rem;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+
+}
+
 .modal__content--body {
-    margin-top: 20px;
+    margin-top: 0px;
+    height: 480px;
 }
