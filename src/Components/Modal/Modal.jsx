@@ -27,7 +27,7 @@ function Modal({ isModalOpen, onClose, modalContent, projectId, title }) {
             <div className="modal__content" ref={modalRef}>
                 <div className="modal__content--header">
                     <h2>{title}</h2>
-                    <button onClick={onClose}><FontAwesomeIcon icon={faXmark} /></button>
+                    <button onClick={onClose}><FontAwesomeIcon icon={faXmark}  /></button>
                 </div>
                 <div className="modal__content--body">
                     {modalContent}

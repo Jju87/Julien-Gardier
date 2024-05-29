@@ -1,6 +1,7 @@
 import phoneMockup from '../Assets/Images/phone-mockup.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faBookOpen, faPersonHiking, faRocket, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faBookOpen, faPersonHiking, faRocket, faMinus, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const projectsContent = [
     {
@@ -13,7 +14,7 @@ const projectsContent = [
                     <img src={phoneMockup} alt="contour d'un téléphone" />
                     <iframe 
                         src="https://kasa-rose.vercel.app/" 
-                        title="Kasa, application web développée par julien Gardier"  
+                        title="Kasa, application web développée par Julien Gardier"  
                     ></iframe>            
                 </div>
                 <div className="projects-container__text">
@@ -30,14 +31,23 @@ const projectsContent = [
                     </ul>
                     </section>
                     <section>
-                    <h3> <FontAwesomeIcon icon={faPersonHiking} /> Défis relevés</h3>
-                    <p> - La création d'un carrousel d'images codé à partir de zéro s'est révélée être assez technique.</p>
-                    <p> - L'intégration des animations </p>
+                    <h3> <FontAwesomeIcon icon={faPersonHiking} /> Défis relevés sur ce projet</h3>
+                    <ul>
+                        <li> <FontAwesomeIcon icon={faMinus} /> La création du carrousel d'images codé sans bibliothèques externes.</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> L'intégration des animations de "collapse". </li>
+                    </ul>
                     </section>
                     <section>
                     <h3> <FontAwesomeIcon icon={faRocket} /> Initiatives supplémentaires</h3>
-                    <p>Pour aller plus loin, j'ai intégré au carrousel d'images une logique de défilement automatique avec un effet de transition entre les images.</p>
-                    </section>
+                    <p>J'ai ajouté un défilement automatique avec transitions au carrousel d'images.</p>                    </section>
+                </div>
+                <div className="projects-container__links">
+                    <div className="projects-container__links--website">
+                        <a href="https://kasa-rose.vercel.app/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                    </div>
+                    <div className="projects-container__links--github">
+                        <a href="https://github.com/Jju87/Kasa" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /> Voir le code</a>
+                    </div>
                 </div>
             </article>
             </>
@@ -48,27 +58,100 @@ const projectsContent = [
         title: "Création d'une page web dynamique avec JavaScript",
         content: (
             <>
-                <h3>Projet Backend 1</h3>
-                <p>Détails du projet backend 1</p>
-                <ul>
-                    <li>Point fort 1</li>
-                    <li>Point fort 2</li>
-                    <li>Point fort 3</li>
-                </ul>
+             <article className="projects-container">
+                <div className="projects-container__mobile">
+                    <img src={phoneMockup} alt="contour d'un téléphone" />
+                    <iframe 
+                        src="https://sophie-bluel-architecte-iota.vercel.app/" 
+                        title="Sophie Bluel, application web développée par Julien Gardier"  
+                    ></iframe>            
+                </div>
+                <div className="projects-container__text">
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faBookOpen} /> Scénario</h3>
+                    <p>Développer le portfolio de l'architecte Sophie Bluel. Une fois connectée, elle pourra uploader ou supprimer des médias.</p>
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faCode} /> Compétences requises</h3>
+                    <ul>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Manipulation des éléments du DOM avec JavaScript</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Communication avec une API (utilisation de Swagger/Postman)</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Récupération des données utilisateur via des formulaires</li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faPersonHiking} /> Défis relevés sur ce projet</h3>
+                    <ul>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Mise à jour dynamique des données pour éviter le rechargement de la page par l'utilisateur</li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faRocket} /> Initiatives supplémentaires</h3>
+                    <p>J'ai entièrement reconstruit le back-end de ce projet pour permettre son déploiement en ligne. J'ai utilisé Express et MongoDB, en respectant la logique du front-end.</p>
+                    <p>Les images, auparavant stockées localement, sont maintenant hébergées sur un CDN.</p>
+                    <p>J'ai aussi ajouté un middleware pour modérer les images postées.</p>
+                    <p>Essayez de vous connecter avec le compte démo pour ajouter ou supprimer une photo !</p>                    </section>
+                </div>
+                <div className="projects-container__links">
+                    <div className="projects-container__links--website">
+                        <a href="https://sophie-bluel-architecte-iota.vercel.app/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                    </div>
+                    <div className="projects-container__links--github">
+                        <a href="https://github.com/Jju87/Sophie-Bluel_Architecte" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /> Voir le code</a>
+                    </div>
+                </div>
+            </article>
             </>
         )
     },
     {
         id: 2,
+        title: "Développer le back-end d'un site de notation de livres",
         content: (
             <>
-                <h3>Projet Backend 2</h3>
-                <p>Détails du projet backend 2</p>
-                <ul>
-                    <li>Point fort 1</li>
-                    <li>Point fort 2</li>
-                    <li>Point fort 3</li>
-                </ul>
+             <article className="projects-container">
+                <div className="projects-container__mobile">
+                    <img src={phoneMockup} alt="contour d'un téléphone" />
+                    <iframe 
+                        src="https://vieux-grimoire.vercel.app/" 
+                        title="Au vieux grimoire, application web développée par Julien Gardier"  
+                    ></iframe>            
+                </div>
+                <div className="projects-container__text">
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faBookOpen} /> Scénario</h3>
+                    <p>Développer le portfolio de l'architecte Sophie Bluel. Une fois connectée, elle pourra uploader ou supprimer des médias.</p>
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faCode} /> Compétences requises</h3>
+                    <ul>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Manipulation des éléments du DOM avec JavaScript</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Communication avec une API (utilisation de Swagger/Postman)</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Récupération des données utilisateur via des formulaires</li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faPersonHiking} /> Défis relevés sur ce projet</h3>
+                    <ul>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Mise à jour dynamique des données pour éviter le rechargement de la page par l'utilisateur</li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faRocket} /> Initiatives supplémentaires</h3>
+                    <p>J'ai entièrement reconstruit le back-end de ce projet pour permettre son déploiement en ligne. J'ai utilisé Express et MongoDB, en respectant la logique du front-end.</p>
+                    <p>Les images, auparavant stockées localement, sont maintenant hébergées sur un CDN.</p>
+                    <p>J'ai aussi ajouté un middleware pour modérer les images postées.</p>
+                    <p>Essayez de vous connecter avec le compte démo pour ajouter ou supprimer une photo !</p>                    </section>
+                </div>
+                <div className="projects-container__links">
+                    <div className="projects-container__links--website">
+                        <a href="https://vieux-grimoire.vercel.app/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                    </div>
+                    <div className="projects-container__links--github">
+                        <a href="https://github.com/Jju87/Vieux-Grimoire" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /> Voir le code</a>
+                    </div>
+                </div>
+            </article>
             </>
         )
     },
