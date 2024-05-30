@@ -32,7 +32,7 @@
         transform: scale(1);
     }
 
-    &.modal-0, &.modal-1, &.modal-2{
+    &.modal-0, &.modal-1, &.modal-2, &.modal-3, &.modal-4{
         .modal__content {
             border: 1px solid $background-color;
             &--header {
@@ -128,10 +128,9 @@
             }
         }
     }
-    &.modal-3 {
-        .modal__content {
-            background-color: #f0f0f0;
-            border: 2px solid #333;
+    &.modal-2, &.modal-3 {
+        .modal__content{
+            background-color: #fff;
         }
     }
 

@@ -1,7 +1,7 @@
 import phoneMockup from '../Assets/Images/phone-mockup.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faBookOpen, faPersonHiking, faRocket, faMinus, faEye } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGoogleDrive } from '@fortawesome/free-brands-svg-icons';
 
 const projectsContent = [
     {
@@ -106,7 +106,7 @@ const projectsContent = [
     },
     {
         id: 2,
-        title: "Développer le back-end d'un site de notation de livres",
+        title: "Développement du back-end d'un site de notation de livres",
         content: (
             <>
              <article className="projects-container">
@@ -120,28 +120,29 @@ const projectsContent = [
                 <div className="projects-container__text">
                     <section>
                     <h3> <FontAwesomeIcon icon={faBookOpen} /> Scénario</h3>
-                    <p>Développer le portfolio de l'architecte Sophie Bluel. Une fois connectée, elle pourra uploader ou supprimer des médias.</p>
+                    <p>Permettre aux utilisateurs de créer, noter et consulter des livres.</p>                    
                     </section>
                     <section>
                     <h3> <FontAwesomeIcon icon={faCode} /> Compétences requises</h3>
                     <ul>
-                        <li> <FontAwesomeIcon icon={faMinus} /> Manipulation des éléments du DOM avec JavaScript</li>
-                        <li> <FontAwesomeIcon icon={faMinus} /> Communication avec une API (utilisation de Swagger/Postman)</li>
-                        <li> <FontAwesomeIcon icon={faMinus} /> Récupération des données utilisateur via des formulaires</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Green code</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Multer, fs, bcrypt, mongoose</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Respect des exigences de l'API</li>
                     </ul>
                     </section>
                     <section>
                     <h3> <FontAwesomeIcon icon={faPersonHiking} /> Défis relevés sur ce projet</h3>
                     <ul>
-                    <li> <FontAwesomeIcon icon={faMinus} /> Mise à jour dynamique des données pour éviter le rechargement de la page par l'utilisateur</li>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Création d'une route qui envoie un array (tableau) des trois meilleurs notes</li>
                     </ul>
                     </section>
                     <section>
                     <h3> <FontAwesomeIcon icon={faRocket} /> Initiatives supplémentaires</h3>
-                    <p>J'ai entièrement reconstruit le back-end de ce projet pour permettre son déploiement en ligne. J'ai utilisé Express et MongoDB, en respectant la logique du front-end.</p>
-                    <p>Les images, auparavant stockées localement, sont maintenant hébergées sur un CDN.</p>
-                    <p>J'ai aussi ajouté un middleware pour modérer les images postées.</p>
-                    <p>Essayez de vous connecter avec le compte démo pour ajouter ou supprimer une photo !</p>                    </section>
+                    <p>J'ai migré le stockage des images à un CDN pour améliorer les performances et pouvoir déployer en ligne.</p>
+                    <p>J'ai intégré une logique de modération de contenu pour filtrer les images. Le middleware de modération envoie l'image à une API, qui permet à une IA d'analyser l'image. Mon code valide ensuite l'image en fonction de l'analyse.</p>
+                    <p>J'ai également modifié le modèle pour permettre aux utilisateurs d'ajouter des avis dans une nouvelle section "À propos de ce livre".</p>                    
+                    <p>N'hésitez pas à ajouter ou supprimer un livre ! Un compte démo et des inputs préremplis sont disponibles pour faciliter l'expérience.</p>
+                    </section>                
                 </div>
                 <div className="projects-container__links">
                     <div className="projects-container__links--website">
@@ -157,31 +158,93 @@ const projectsContent = [
     },
     {
         id: 3,
+        title: "Création de la page d'accueil d'une agence de voyage avec HTML & CSS",
         content: (
             <>
-                <h3>Projet Frontend 2</h3>
-                <p>Détails du projet frontend 2</p>
-                <ul>
-                    <li>Point fort 1</li>
-                    <li>Point fort 2</li>
-                    <li>Point fort 3</li>
-                </ul>
+             <article className="projects-container">
+                <div className="projects-container__mobile">
+                    <img src={phoneMockup} alt="contour d'un téléphone" />
+                    <iframe 
+                        src="https://jju87.github.io/booki-openclassrooms/" 
+                        title="Booki, développé par Julien Gardier"  
+                    ></iframe>            
+                </div>
+                <div className="projects-container__text">
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faBookOpen} /> Scénario</h3>
+                    <p>Intégration de la page d'acceuil de Booki, site de type "Airbnb"</p>                    
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faCode} /> Compétences requises</h3>
+                    <ul>
+                        <li> <FontAwesomeIcon icon={faMinus} /> HTML, CSS</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Intégration d'une maquette Figma</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Utilisation de Github</li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faPersonHiking} /> Défis relevés sur ce projet</h3>
+                    <ul>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Intégration des maquettes en responsive</li>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Modification d'un code CSS préexistant</li>                    </ul>
+                    </section>
+                </div>
+                <div className="projects-container__links">
+                    <div className="projects-container__links--website">
+                        <a href="https://jju87.github.io/booki-openclassrooms/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                    </div>
+                    <div className="projects-container__links--github">
+                        <a href="https://github.com/Jju87/booki-openclassrooms" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /> Voir le code</a>
+                    </div>
+                </div>
+            </article>
             </>
         )
     },
     {
         id: 4,
+        title: "Débuggage et optimisation d'un site de photographe",
         content: (
             <>
-                <h3>Projet d'optimisation</h3>
-                <p>Détails du projet d'optimisation</p>
-                <ul>
-                    <li>Point fort 1</li>
-                    <li>Point fort 2</li>
-                    <li>Point fort 3</li>
-                </ul>
+             <article className="projects-container">
+                <div className="projects-container__mobile">
+                    <img src={phoneMockup} alt="contour d'un téléphone" />
+                    <iframe 
+                        src="https://jju87.github.io/booki-openclassrooms/" 
+                        title="Booki, développé par Julien Gardier"  
+                    ></iframe>            
+                </div>
+                <div className="projects-container__text">
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faBookOpen} /> Scénario</h3>
+                    <p>Intégration de la page d'acceuil de Booki, site de type "Airbnb"</p>                    
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faCode} /> Compétences requises</h3>
+                    <ul>
+                        <li> <FontAwesomeIcon icon={faMinus} /> HTML, CSS</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Intégration d'une maquette Figma</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Utilisation de Github</li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h3> <FontAwesomeIcon icon={faPersonHiking} /> Défis relevés sur ce projet</h3>
+                    <ul>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Intégration des maquettes en responsive</li>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Modification d'un code CSS préexistant</li>                    </ul>
+                    </section>
+                </div>
+                <div className="projects-container__links">
+                    <div className="projects-container__links--website">
+                        <a href="https://jju87.github.io/Carducci-OpenClassroomss/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                    </div>
+                    <div className="projects-container__links--pdf">
+                        <a href="https://docs.google.com/document/d/1WNRTv070XOpPMh36o0PTYpS6GgP2FsIp7SGzIVCzMHA/edit?usp=sharing" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGoogleDrive} /> Voir le rapport</a>
+                    </div>
+                </div>
+            </article>
             </>
-        )
+        )    
     }
 ];
 
