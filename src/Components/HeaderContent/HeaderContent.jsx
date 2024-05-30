@@ -12,6 +12,11 @@ function HeaderContent() {
 
     const text = ["Développeur Web MERN      ", "MongoDB", "Express", "React", "Node.js"]
 
+    useEffect(()=>{
+        const img = new Image();
+        img.src = portrait2;
+    },[]);
+
     const randomSpeed = (min, max) => { 
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
@@ -19,7 +24,7 @@ function HeaderContent() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsAnimationStarted(true); // Mettre à jour l'état pour indiquer que l'animation peut commencer
-        }, 2000); // Délai de 2 secondes avant de démarrer l'animation
+        }, 2600); // Délai de 2 secondes avant de démarrer l'animation
 
         return () => clearTimeout(timer);
     }, []);

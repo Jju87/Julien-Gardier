@@ -9,14 +9,22 @@
     }
 }
 
+@keyframes from-right{
+    from{
+        transform: translateX(300%);
+    }
+    to{
+        transform: translateX(0);
+    }
+
+}
+
 @keyframes appear {
     from{
         opacity: 0;
-        filter: blur(5px);
     }
     to{
         opacity: 1;
-        filter: blur(0px);
     }
 
 }
@@ -45,13 +53,13 @@
             opacity: 0;
             font-size: 2.2rem;
             font-weight: 600;
-            animation: appear ease 300ms 500ms forwards;
+            animation: appear ease 400ms 1200ms forwards;
         }
         &__name{
             letter-spacing: 0.03em;
             opacity: 0;
             font-size: 5.6rem;
-            animation: appear ease 500ms 900ms forwards;
+            animation: appear ease 400ms 1600ms forwards;
             span {
                 color: $secondary-color;
                 font-size: 5.6rem;
@@ -65,7 +73,7 @@
             letter-spacing: 0.07em;
             font-weight: 700;
             display: block;
-            animation: blink 1s step-end infinite;
+            animation: blink 1000ms step-end infinite;
             &--transparent{
                 color: #6789BA;
                 font-weight:700;
@@ -75,11 +83,13 @@
         }
     }
     .portrait-container{
+        opacity: 0;
         width: 50%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         position: relative;
+        animation: appear 600ms 200ms ease-in-out forwards;
         &__frame{
             height: 400px;
             width: 293px;
@@ -107,6 +117,7 @@
             justify-content: center;
             align-items: flex-start;
             gap: 10px;
+            animation: from-right ease-in-out forwards 1000ms;        
         }       
     }
 
