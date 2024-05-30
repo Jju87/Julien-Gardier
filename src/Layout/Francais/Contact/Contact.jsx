@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
 
-import callMeImage from "../../../Assets/Images/call.jpg";
+import callMeImage from "../../../Assets/Images/call.webp";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faComments, faPhoneVolume  } from '@fortawesome/free-solid-svg-icons';

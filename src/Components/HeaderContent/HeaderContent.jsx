@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import portrait2 from '../../Assets/Images/Portrait-fond-transparent.png'
+import portrait2 from '../../Assets/Images/Portrait-fond-transparent.webp'
 import SkillsBox from '../SkillsBox/SkillsBox.jsx';
 import './headercontent.scss';
 

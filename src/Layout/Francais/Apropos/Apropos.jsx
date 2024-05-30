@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 
 import './apropos.scss';
-import selfie from '../../../Assets/Images/selfie.jpg';
-import bateau from '../../../Assets/Images/bateau.jpg';
+import selfie from '../../../Assets/Images/selfie.webp';
+import bateau from '../../../Assets/Images/bateau.webp';
 
 
 function Apropos() {
