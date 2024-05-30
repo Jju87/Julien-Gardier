@@ -12,6 +12,8 @@ function CardCarousel({ filter }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
     const [selectedProjectId, setSelectedProjectId] = useState(null);
+    const [key, setKey] = useState(Math.random())
+
 
     const isGroupVisible = (filter, index) => {
         if (filter === 'Tout') return true;
@@ -45,6 +47,7 @@ function CardCarousel({ filter }) {
         setModalContent(projectContent.content);
         setSelectedProjectId(projectContent.id);
         setIsModalOpen(true);
+        setKey(Math.random());
         console.log(`Card group ${index} clicked. Modal open status: ${isModalOpen}`);
     };
 
@@ -86,6 +89,7 @@ function CardCarousel({ filter }) {
                     modalContent={modalContent}
                     projectId={selectedProjectId}
                     title={projectsContent[selectedProjectId].title}
+                    key={key}
                 />
             )}
         </>

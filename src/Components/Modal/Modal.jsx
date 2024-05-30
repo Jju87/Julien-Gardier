@@ -4,7 +4,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import './modal.scss';
 import '../../Styles/basics.scss'
 
-function Modal({ isModalOpen, onClose, modalContent, projectId, title }) {
+function Modal({ isModalOpen, onClose, modalContent, projectId, title, key }) {
     const modalRef = useRef();
 
     useEffect(() => {
