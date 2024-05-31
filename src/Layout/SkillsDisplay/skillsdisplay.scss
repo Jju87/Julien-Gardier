@@ -28,10 +28,16 @@
         overflow: hidden;
         position: relative;
         background-color: $background-color;
+        @media screen and (max-width: 1200px){
+            width: 90%;
+        }
         & h2{
             color: $primary-font-color;
             font-size: 2.5rem;
             overflow: hidden;
+            @media screen and (max-width: 1200px){
+                font-size: 2.2rem;
+            }
         }
     }
     &__icons{

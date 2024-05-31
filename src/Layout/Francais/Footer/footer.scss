@@ -8,6 +8,9 @@ footer{
     align-items: center;
     flex-direction: column;
     background-color: $background-color;
+    @media screen and (max-width: 1200px){
+        height: 150px;
+    }
     .footer__container{
         border-top: 0.5px solid #ccc;
         width: 40%;
@@ -17,7 +20,10 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap:5px;
+        gap: 5px;
+        @media screen and (max-width: 768px) {
+            width: 80%;
+        }
         &--links{
             display: flex;
             gap: 20px;

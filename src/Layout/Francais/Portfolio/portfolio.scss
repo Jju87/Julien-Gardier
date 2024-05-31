@@ -9,6 +9,9 @@
     align-items: center;
     position: relative;
     margin-top: 30px;
+    @media screen and (min-height: 819px) and (max-width: 1048px){
+        height: 50vh;
+    }
     &__container{
         width: 75%;
         height: 100%;
@@ -17,6 +20,9 @@
         background-size: cover;
         position: relative;
         border-radius: 20px;
+        @media screen and (max-width: 1200px){
+            width: 90%;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -41,6 +47,9 @@
                 h2{
                     font-size: 2.5rem;
                     color: #fff;
+                    @media screen and (max-width: 768px){
+                        font-size: 2.2rem;
+                    }
                 }
             &--filters{
                 display: flex;
@@ -50,6 +59,10 @@
                 width: 80%;
                 height: 50px;
                 margin-top: 20px;
+                @media screen and (max-width: 768px){
+                    width: 90%;
+                    height: 45px;
+                }
                 & button{
                     background: rgba(206, 205, 205, 0.19);
                     backdrop-filter: blur(3px);

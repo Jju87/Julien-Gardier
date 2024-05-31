@@ -27,6 +27,9 @@
   overflow: hidden;
   width: 40vmin;
   max-width: 100%;
+  @media screen and (max-width: 1200px) {
+    width: 36vmin;
+  }
 }
 .card-groups{
 .card-group {
@@ -181,7 +184,7 @@
             background-origin: content-box;
         }
         &:nth-child(6) {
-          background-color: WHITE;
+          background-color: white;
           background-image: url("../../Assets/Portfolio/Nina/Score.PNG");
           background-origin: content-box;
           padding: 23px;
@@ -210,6 +213,10 @@
         background-repeat: no-repeat;
         background-origin: content-box;
         padding: 5px;
+        @media screen and (max-width: 1200px) {
+          width: 11vmin;
+          
+        }
         &.group-0{
           &:nth-child(1) {
               background-image: url("../../Assets/Icons/html-icon.svg");

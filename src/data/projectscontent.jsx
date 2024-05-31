@@ -1,4 +1,6 @@
-import phoneMockup from '../Assets/Images/phone-mockup.png'
+import phoneMockup from '../Assets/Images/phone-mockup.png';
+import NinaCarducci from '../Assets/Modals/NinaCarducci.webp';
+import KasaScreenshot from '../Assets/Modals/kasa.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faBookOpen, faPersonHiking, faRocket, faMinus, faEye } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faGoogleDrive } from '@fortawesome/free-brands-svg-icons';
@@ -11,7 +13,7 @@ const projectsContent = [
             <>
              <article className="projects-container">
                 <div className="projects-container__mobile">
-                    <img src={phoneMockup} alt="contour d'un téléphone" />
+                    <img className="projects-container__mobile--mockup" src={phoneMockup} alt="contour d'un téléphone" />
                     <iframe 
                         src="https://kasa-rose.vercel.app/" 
                         title="Kasa, application web développée par Julien Gardier"  
@@ -43,7 +45,7 @@ const projectsContent = [
                 </div>
                 <div className="projects-container__links">
                     <div className="projects-container__links--website">
-                        <a href="https://kasa-rose.vercel.app/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                        <a href="https://kasa-rose.vercel.app/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site en ligne</a>
                     </div>
                     <div className="projects-container__links--github">
                         <a href="https://github.com/Jju87/Kasa" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /> Voir le code</a>
@@ -60,7 +62,7 @@ const projectsContent = [
             <>
              <article className="projects-container">
                 <div className="projects-container__mobile">
-                    <img src={phoneMockup} alt="contour d'un téléphone" />
+                    <img className="projects-container__mobile--mockup" src={phoneMockup} alt="contour d'un téléphone" />
                     <iframe 
                         src="https://sophie-bluel-architecte-iota.vercel.app/" 
                         title="Sophie Bluel, application web développée par Julien Gardier"  
@@ -94,7 +96,7 @@ const projectsContent = [
                 </div>
                 <div className="projects-container__links">
                     <div className="projects-container__links--website">
-                        <a href="https://sophie-bluel-architecte-iota.vercel.app/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                        <a href="https://sophie-bluel-architecte-iota.vercel.app/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site en ligne </a>
                     </div>
                     <div className="projects-container__links--github">
                         <a href="https://github.com/Jju87/Sophie-Bluel_Architecte" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /> Voir le code</a>
@@ -111,7 +113,7 @@ const projectsContent = [
             <>
              <article className="projects-container">
                 <div className="projects-container__mobile">
-                    <img src={phoneMockup} alt="contour d'un téléphone" />
+                    <img className="projects-container__mobile--mockup" src={phoneMockup} alt="contour d'un téléphone" />
                     <iframe 
                         src="https://vieux-grimoire.vercel.app/" 
                         title="Au vieux grimoire, application web développée par Julien Gardier"  
@@ -146,7 +148,7 @@ const projectsContent = [
                 </div>
                 <div className="projects-container__links">
                     <div className="projects-container__links--website">
-                        <a href="https://vieux-grimoire.vercel.app/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                        <a href="https://vieux-grimoire.vercel.app/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site en ligne</a>
                     </div>
                     <div className="projects-container__links--github">
                         <a href="https://github.com/Jju87/Vieux-Grimoire" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /> Voir le code</a>
@@ -163,7 +165,7 @@ const projectsContent = [
             <>
              <article className="projects-container">
                 <div className="projects-container__mobile">
-                    <img src={phoneMockup} alt="contour d'un téléphone" />
+                    <img className="projects-container__mobile--mockup" src={phoneMockup} alt="contour d'un téléphone" />
                     <iframe 
                         src="https://jju87.github.io/booki-openclassrooms/" 
                         title="Booki, développé par Julien Gardier"  
@@ -172,7 +174,7 @@ const projectsContent = [
                 <div className="projects-container__text">
                     <section>
                     <h3> <FontAwesomeIcon icon={faBookOpen} /> Scénario</h3>
-                    <p>Intégration de la page d'acceuil de Booki, site de type "Airbnb"</p>                    
+                    <p>Intégration de la page d'acceuil de Booki, site de type "Airbnb". Premier projet de ma formation "développeur web" avec OpenClassrooms.</p>                    
                     </section>
                     <section>
                     <h3> <FontAwesomeIcon icon={faCode} /> Compétences requises</h3>
@@ -186,12 +188,13 @@ const projectsContent = [
                     <h3> <FontAwesomeIcon icon={faPersonHiking} /> Défis relevés sur ce projet</h3>
                     <ul>
                     <li> <FontAwesomeIcon icon={faMinus} /> Intégration des maquettes en responsive</li>
-                    <li> <FontAwesomeIcon icon={faMinus} /> Modification d'un code CSS préexistant</li>                    </ul>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Modification d'un code CSS préexistant</li>                    
+                    </ul>
                     </section>
                 </div>
                 <div className="projects-container__links">
                     <div className="projects-container__links--website">
-                        <a href="https://jju87.github.io/booki-openclassrooms/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                        <a href="https://jju87.github.io/booki-openclassrooms/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site en ligne </a>
                     </div>
                     <div className="projects-container__links--github">
                         <a href="https://github.com/Jju87/booki-openclassrooms" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /> Voir le code</a>
@@ -208,35 +211,36 @@ const projectsContent = [
             <>
              <article className="projects-container">
                 <div className="projects-container__mobile">
-                    <img src={phoneMockup} alt="contour d'un téléphone" />
-                    <iframe 
-                        src="https://jju87.github.io/booki-openclassrooms/" 
-                        title="Booki, développé par Julien Gardier"  
-                    ></iframe>            
+                    <img 
+                        id="ninaImg"
+                        src={NinaCarducci}
+                        alt="Nina Carducci, développé par Julien Gardier"  
+                    />            
                 </div>
                 <div className="projects-container__text">
                     <section>
                     <h3> <FontAwesomeIcon icon={faBookOpen} /> Scénario</h3>
-                    <p>Intégration de la page d'acceuil de Booki, site de type "Airbnb"</p>                    
-                    </section>
+                    <p>Optimisation SEO pour le site de Nina Carducci, une photographe, selon ses demandes indiquées dans son mail. Un rapport détaillé de l'intervention sera fourni.</p>                    </section>
                     <section>
                     <h3> <FontAwesomeIcon icon={faCode} /> Compétences requises</h3>
                     <ul>
-                        <li> <FontAwesomeIcon icon={faMinus} /> HTML, CSS</li>
-                        <li> <FontAwesomeIcon icon={faMinus} /> Intégration d'une maquette Figma</li>
-                        <li> <FontAwesomeIcon icon={faMinus} /> Utilisation de Github</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Optimisation des performances (compression d'images, minification, CDN)</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> SEO (référencement et mots-clefs)</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Intégration des balises Meta pour les réseaux sociaux</li>
+                        <li> <FontAwesomeIcon icon={faMinus} /> Amélioration de l'accessibilité (Wave, ARIA, sémantique HTML)</li>
                     </ul>
                     </section>
                     <section>
                     <h3> <FontAwesomeIcon icon={faPersonHiking} /> Défis relevés sur ce projet</h3>
                     <ul>
-                    <li> <FontAwesomeIcon icon={faMinus} /> Intégration des maquettes en responsive</li>
-                    <li> <FontAwesomeIcon icon={faMinus} /> Modification d'un code CSS préexistant</li>                    </ul>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Production d'un rapport d'intervention détaillé</li>
+                    <li> <FontAwesomeIcon icon={faMinus} /> Débuggage du carrousel d'images</li>
+                    </ul>
                     </section>
                 </div>
                 <div className="projects-container__links">
                     <div className="projects-container__links--website">
-                        <a href="https://jju87.github.io/Carducci-OpenClassroomss/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site</a>
+                        <a href="https://jju87.github.io/Carducci-OpenClassroomss/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> Voir le site en ligne </a>
                     </div>
                     <div className="projects-container__links--pdf">
                         <a href="https://docs.google.com/document/d/1WNRTv070XOpPMh36o0PTYpS6GgP2FsIp7SGzIVCzMHA/edit?usp=sharing" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGoogleDrive} /> Voir le rapport</a>

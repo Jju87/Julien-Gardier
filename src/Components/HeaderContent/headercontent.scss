@@ -42,6 +42,10 @@
     height: auto;
     max-width: 1200px;
     display: flex;
+    justify-content: center;
+    @media screen and (max-width: 1200px){
+        width: 90%;        
+    }
     .introduction{
         width: 50%;
         display: flex;
@@ -54,17 +58,35 @@
             font-size: 2.2rem;
             font-weight: 600;
             animation: appear ease 400ms 1200ms forwards;
+            @media screen and (max-width: 1200px){
+                font-size: 1.8rem;
+            }
+            @media screen and (max-width: 1048px){
+                font-size: 1.6rem;
+            }
         }
         &__name{
             letter-spacing: 0.03em;
             opacity: 0;
             font-size: 5.6rem;
             animation: appear ease 400ms 1600ms forwards;
+            @media screen and (max-width: 1200px){
+                font-size: 4.6rem;
+            }
+            @media screen and (max-width: 1048px){
+                font-size: 4.2rem;
+            }
             span {
                 color: $secondary-color;
                 font-size: 5.6rem;
                 letter-spacing: 0.03em;
                 font-weight:700;
+                @media screen and (max-width: 1200px){
+                    font-size: 4.6rem;
+                }
+                @media screen and (max-width: 1048px){
+                    font-size: 4.2rem;
+                }
             }
         }
         &__skills{
@@ -74,11 +96,23 @@
             font-weight: 700;
             display: block;
             animation: blink 1000ms step-end infinite;
+            @media screen and (max-width: 1200px){
+                font-size: 2.6rem;
+            }
+            @media screen and (max-width: 1048px){
+                font-size: 2.4rem;
+            }
             &--transparent{
                 color: #6789BA;
                 font-weight:700;
                 font-size: 3.2rem;
                 border-color: transparent;
+                @media screen and (max-width: 1200px){
+                    font-size: 2.6rem;
+                }
+                @media screen and (max-width: 1048px){
+                    font-size: 2.4rem;
+                }
             }
         }
     }
@@ -99,11 +133,19 @@
             animation: morph ease-in-out 12s infinite;
             box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
             z-index: 0;
-            box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5);            
+            box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5);
+            @media screen and (max-width: 1200px){
+                height: 300px;
+                width: 220px;
+            }            
             &--portrait2{
                 height: 400px;
                 width: 293px;
                 filter:drop-shadow(20px 10px 20px rgba(0,0,0,0.7));
+                @media screen and (max-width: 1200px){
+                    height: 300px;
+                    width: 220px;
+                }
             }
         }  
         .portrait-container__strengths{
@@ -117,7 +159,11 @@
             justify-content: center;
             align-items: flex-start;
             gap: 10px;
-            animation: from-right ease-in-out forwards 1000ms;        
+            animation: from-right ease-in-out forwards 1000ms; 
+            @media screen and (max-width: 1200px){
+                left: 180px;
+                width: 300px;
+            }       
         }       
     }
 
