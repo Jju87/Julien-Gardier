@@ -8,16 +8,32 @@
     justify-content: space-evenly;
     height: 100vh;
     background-color: $background-color;
+    border: 3px solid blue;
     @media screen and (min-height: 819px) and (max-width: 1048px){
         height: 60vh;
     }
+    @media screen and (max-width:768px){
+        height: 170vh;
+    }
+    @media screen and (max-height: 450px) and (max-width:915px){
+        height: 170vh;
+    }
+    @media screen and (min-height: 840px ) and (max-width: 768px){
+        height: 130vh;
+    }
+
    
     & h2{
     margin-top: 10px;
     color: $primary-font-color;
     font-size: 2.5rem;
+    overflow: hidden;
+    height: 35px;
     @media screen and (max-width: 1200px){
         font-size: 2.2rem;
+    }
+    @media screen and (max-width:768px){
+        margin-bottom: 15px;
     }
     }
     &__content{
@@ -28,8 +44,14 @@
         justify-content: center;
         align-items: center; 
         overflow: hidden;
+        border: 1px solid green;
         @media screen and (max-width: 1200px){
             width: 90%;
+        }
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+            width: 95%;
+            height: 160vh;
         }
         &--pictures{
             width: 50%;
@@ -38,6 +60,20 @@
             overflow: hidden;
             height: 500px;
             transition: transform 0.5s ease;
+            border: 1px solid red;
+            @media screen and (max-width:768px){
+                width:75%;
+                height:45%;
+            }
+            @media screen and (max-width: 568px){
+                height: 40%;
+            }
+            @media screen and (max-width: 468px){
+                width: 85%;
+            }
+            @media screen and (max-width:398px){
+                height: 35%;
+            }
             &-selfie{
                 width: 257px;
                 height: 350px;
@@ -45,6 +81,18 @@
                 position: absolute;
                 top: 18px;
                 left: 18px;
+                @media screen and (max-width:1199px){
+                    width: 50%;
+                    height: auto;
+                }
+                @media screen and (max-width: 975px){
+                    width: 55%;
+                    height: auto;
+                }
+                @media screen and (max-width: 768px){
+                    width: 50%;
+                    height: auto;
+                }
             }
             &-bateau{
                 width:263;
@@ -53,6 +101,19 @@
                 position: absolute;
                 bottom: 18px;
                 right: 18px;
+                @media screen and (max-width:1199px){
+                    width: 50%;
+                    height: auto;
+                }
+                @media screen and (max-width: 975px){
+                    width: 55%;
+                    height: auto;
+                }
+                @media screen and (max-width: 768px){
+                    width:50%;
+                    height: auto;
+                }
+
             }
         }
         &--text{
@@ -64,9 +125,22 @@
             height: 100%;
             padding:10px 20px;
             text-align: justify;
+            border: 1px solid;
             @media screen and (max-width: 1200px){
                 padding: 10px 10px;
-                
+            }
+            @media screen and (max-width:768px){
+                width:70%;
+                height: 55%;
+            }
+            @media screen and (max-width:568px){
+                height: 60%;
+            }
+            @media screen and (max-width:468px){
+                width: 80%;
+            }
+            @media screen and (max-width:398px){
+                height: 65%;
             }
             & h3{
                 color: $primary-font-color;
@@ -75,6 +149,9 @@
                 @media screen and (max-width: 1200px){
                     font-size: 1.6rem;
                     padding: 8px 0px;
+                }
+                @media screen and (max-width:768px){
+                    text-align: center;
                 }
             }   
             p{

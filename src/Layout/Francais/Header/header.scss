@@ -72,9 +72,13 @@ header{
         height: auto;
         justify-content: space-between;
     }
-    @media screen and (max-height: 450px) and (max-width:915px){
+    @media screen and (max-height: 450px) and (max-width:935px){
         height: 150vh;
     }
+    @media screen and (min-height: 850px ) and (max-width: 768px){
+        height: 80vh;
+    }
+
 
     .nav-fixed {
         transform-origin: bottom left;

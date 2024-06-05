@@ -53,7 +53,7 @@
         height: 90vh;
         width: 95%;
     }
-    @media screen and (max-height: 450px) and (max-width:915px){
+    @media screen and (max-height: 450px) and (max-width:935px){
         height: 130vh;
     }
 
@@ -177,9 +177,8 @@
             overflow: hidden;
             border-radius: 41% 59% 53% 47% / 30% 64% 36% 70% ;
             animation: morph ease-in-out 12s infinite;
-            box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
             z-index: 0;
-            box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5);
+            box-shadow: inset -6px 4px 10px rgba(0,0,0,0.5);
             @media screen and (max-width: 1200px){
                 height: 300px;
                 width: 220px;
