@@ -11,23 +11,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 13px;
+    gap: 1px;
+    padding: 15px;
     overflow: hidden;
     box-sizing: border-box;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
     z-index: 2;
+    @media screen and (max-width: 1199px){
+        width: 140px;
+        height: 45; 
+        padding: 10px; 
+        background: linear-gradient(104deg, transparent 28%, rgba(255,255,255,1) 29%);  
+      
+    }
     .cross{
         width: 20px;
         height: 20px;
         color: #fff;
+        @media screen and (max-width: 1199px){
+            width: 17px;
+            height: 17px;
+            
+        }
     }
     p{  
-        padding: 2px;
+        padding-left: 20px;
         font-size: 1.3rem;
         font-weight: 600;
         background: linear-gradient(159deg, $primary-color 50%, rgba(166,104,193,0.9948354341736695) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        @media screen and (max-width: 1199px){
+            font-size: 1.3rem;
+        }
     }
 }

@@ -3,15 +3,33 @@
  import logoHeader from '../../../Assets/Images/logo.PNG';
  import React, { useState, useEffect } from 'react';
  import englishFlag from '../../../Assets/Images/eng-flag.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark} from '@fortawesome/free-solid-svg-icons';
 
  
  
  function Header({children}) {
     const [isFixed, setIsFixed] = useState(false);
+    const [ulIsOpen, setUlIsOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Nettoyer l'écouteur d'événements lorsque le composant est démonté
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
+                if (window.innerWidth > 768)
                 setIsFixed(!entry.isIntersecting);
             },
             { threshold: 0.01 }
@@ -33,7 +51,7 @@
         <header id="accueil">
             <nav className={isFixed ? 'nav-fixed' : ''}>
                 <img className='logo' src={logoHeader} alt="Logo de Julien Gardier, développeur web en Essonne" />
-                <ul>
+                <ul className={isMobile ? (ulIsOpen ? "expanded" : 'closed') : "unvisible"}>
                     <li>
                         <a href="#accueil">Accueil</a>
                     </li>
@@ -51,7 +69,12 @@
                             <img src={englishFlag} alt="swith to english language" />
                         </Link>
                     </li>
-                </ul>            
+                </ul>
+                {ulIsOpen ?
+                <FontAwesomeIcon icon={faXmark} className="xmark" onClick={() => setUlIsOpen(false)} />
+                :
+                <FontAwesomeIcon icon={faBars} className="bars" onClick={() => setUlIsOpen(true)} />
+                }
             </nav>
             {children}
         </header>
