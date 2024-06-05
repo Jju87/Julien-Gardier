@@ -68,11 +68,14 @@ header{
     @media screen and (min-height: 819px) and (max-width: 1048px){
         height: 60vh;
     }
-    @media screen and (max-width: 768px){
+    @media screen and  (max-width: 768px){
         height: auto;
         justify-content: space-between;
-        
     }
+    @media screen and (max-height: 450px) and (max-width:915px){
+        height: 150vh;
+    }
+
     .nav-fixed {
         transform-origin: bottom left;
         animation: appear 700ms ease forwards;

@@ -22,8 +22,15 @@
         height: 45; 
         padding: 10px; 
         background: linear-gradient(104deg, transparent 28%, rgba(255,255,255,1) 29%);  
-      
     }
+    @media screen and (max-width:768px){
+        width: 130px;
+        height: 40px;
+    }
+    @media screen and (max-width: 468px){
+        width: 120px;
+    }
+
     .cross{
         width: 20px;
         height: 20px;
@@ -43,6 +50,13 @@
         -webkit-text-fill-color: transparent;
         @media screen and (max-width: 1199px){
             font-size: 1.3rem;
+        }
+        @media screen and (max-width:768px){
+            font-size:1.2rem;
+        }
+        @media screen and (max-width: 468px){
+            font-size: 1.1rem;
+            padding-left: 15px;
         }
     }
 }
