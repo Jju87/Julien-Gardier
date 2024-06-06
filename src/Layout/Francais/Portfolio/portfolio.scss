@@ -12,17 +12,29 @@
     @media screen and (min-height: 819px) and (max-width: 1048px){
         height: 60vh;
     }
+    @media screen and (max-width:768px){
+        height: 55vh;
+    }
+    @media screen and (max-height:700px) and (max-width:768px){
+        height: 80vh;
+    }
     &__container{
         width: 75%;
         height: 100%;
         max-width: 1200px;
         background: url(../../../Assets/Images/portfolio-bg.webp);
         background-size: cover;
+        background-position: center;
         position: relative;
         border-radius: 20px;
         @media screen and (max-width: 1200px){
             width: 90%;
         }
+        @media screen and (max-width:768px){
+            width:100%;
+            border-radius: 0px;
+        }
+    
         &::before{
             content: "";
             position: absolute;
@@ -44,11 +56,16 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 20px;
+                @media screen and (max-width:768px){
+                    border-radius: 0px;
+                }
                 h2{
                     font-size: 2.5rem;
                     color: #fff;
+                    height: 30px;
                     @media screen and (max-width: 768px){
                         font-size: 2.2rem;
+                        margin-top: 25px;
                     }
                 }
             &--filters{
@@ -59,9 +76,13 @@
                 width: 80%;
                 height: 50px;
                 margin-top: 20px;
+                box-sizing: border-box;
                 @media screen and (max-width: 768px){
-                    width: 90%;
-                    height: 45px;
+                    width: 95%;
+                    height: 120px;
+                    flex-wrap: wrap;
+                    gap:0;
+                    justify-content: space-evenly;
                 }
                 & button{
                     background: rgba(206, 205, 205, 0.19);
@@ -69,19 +90,22 @@
                     color: #fff;
                     width: 150px;
                     font-size: 1.6rem;
-                    padding: 10px 20px;
+                    padding: 7px 14px;
                     cursor: pointer;
                     border: rgba(206, 205, 205, 0.19);
                     border-radius: 20px;
+                    @media screen and (max-width:768px) {
+                        font-size: 1.3rem;
+                    }
                     &:hover{
                         background: rgba(206, 205, 205, 0.29);
                         box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.249);
-                        border: 1px solid white;
+                        outline: 1px solid white;
                     }
                     &.active{
                         background: rgba(206, 205, 205, 0.35);
                         box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.249);
-                        border: 1px solid white;
+                        outline: 1px solid white;
                     }
                 }
             }
@@ -89,7 +113,6 @@
                 width: 100%;
                 height:70%;
                 position: relative;
-
             }
         }
     }
