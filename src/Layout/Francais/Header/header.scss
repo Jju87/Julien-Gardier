@@ -160,6 +160,7 @@ header{
                 font-size: 1.8rem;
                 width: 80px;
                 text-align: end;
+                white-space: no-wrap;
                 @media screen and (max-width: 1199px){
                     font-size: 1.6rem;
                     width: 76px;
