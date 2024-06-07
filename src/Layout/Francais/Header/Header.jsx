@@ -51,7 +51,7 @@ import { faBars, faXmark} from '@fortawesome/free-solid-svg-icons';
         <header id="accueil">
             <nav className={isFixed ? 'nav-fixed' : ''}>
                 <img className='logo' src={logoHeader} alt="Logo de Julien Gardier, développeur web en Essonne" />
-                <ul className={isMobile ? (ulIsOpen ? "expanded" : 'closed') : "unvisible"}>
+                <ul className={isMobile ? (ulIsOpen ? "expanded" : 'closed') : "hidden"}>
                     <li>
                         <a href="#accueil">Accueil</a>
                     </li>

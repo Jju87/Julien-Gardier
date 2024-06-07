@@ -9,21 +9,25 @@
     }
 }
 
-@keyframes slideFromLeft {
+@keyframes slideFromTop {
     from {
+        opacity: 0;
         transform: translateY(-300%);
     }
     to {
-        transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0%);
     }
 
 }
 
-@keyframes slideFromRight {
+@keyframes slideFromBottom {
     from {
+        opacity: 1;
         transform: translateY(0%);
     }
     to {
+        opacity: 0;
         transform: translateY(-300%);
     }
     
@@ -32,10 +36,11 @@
 @mixin HamburgerMenu {
     @media screen and (max-width: 768px){
         display: flex;
+        opacity: 0;
         flex-direction: column;
         position: absolute;
         top: -120px;
-        margin:auto;
+        margin: auto;
         width: 60%;
         border: 1px solid white;
         box-shadow: -1px 1px 15px rgba(0,0,0,0.6);
@@ -135,15 +140,14 @@ header{
             justify-content: space-between;
             @media screen and (max-width: 768px){
                 display: none;
-                transform: translateX(100%);
             }
             &.expanded{
                 @include HamburgerMenu;
-                animation: slideFromLeft 500ms ease forwards;
+                animation: slideFromTop 500ms ease forwards;
             }
             &.closed{
                 @include HamburgerMenu;
-                animation: slideFromRight 500ms ease forwards;
+                animation: slideFromBottom 500ms ease forwards;
             }
             &.expanded + .bars{
                 display: none;
@@ -151,10 +155,10 @@ header{
             &.expanded + .xmark{
                 display: block;
             }
-            &.unvisible{
-                @media screen and (max-width:768px){
+            &.hidden{
                 display: none;
-                }
+                transform: translateY(-300px);
+                opacity:0;
             }
             li{
                 font-size: 1.8rem;

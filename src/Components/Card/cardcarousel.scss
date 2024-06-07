@@ -85,7 +85,6 @@
   }
 }
 
-@media screen and (max-width:1199px){
 .card-group.active > .big-card:nth-child(2) {
   animation: bigCard2 300ms 300ms ease forwards;
 }
@@ -116,7 +115,6 @@
 
 .card-group.active > .little-card:nth-child(7) {
   animation: littleCard7 300ms 300ms ease forwards;
-}
 }
 
 .card-group[data-status="active"] {
@@ -456,40 +454,37 @@
 }
 }
 
-.card-group:hover > .card {  
-  box-shadow: -1vmin 2vmin 5vmin rgba(255, 255, 255, 0.149);
-}
 
 .card-group:hover > .big-card:nth-child(2) {
-  transform: translate(-75%, 16%) rotate(-24deg) scale(1);
+  animation: bigCard2 300ms ease forwards;
 }
 
 .card-group:hover > .big-card:nth-child(4) {
-  transform: translate(-5%, -38%) rotate(-8deg);
+  animation: bigCard4 300ms ease forwards;
 }
 
 .card-group:hover > .big-card:nth-child(6) {
-  transform: translate(2%, 50%) rotate(8deg);
+  animation: bigCard6 300ms ease forwards;
 }
 
 .card-group:hover > .big-card:nth-child(8) {
-  transform: translate(68%, 26%) rotate(24deg);
+  animation: bigCard8 300ms ease forwards;
 }
 
 .card-group:hover > .little-card:nth-child(1) {
-  transform: translate(200%, -160%) rotate(-15deg) scale(1);
+  animation: littleCard1 300ms ease forwards;
 }
 
 .card-group:hover > .little-card:nth-child(3) {
-  transform: translate(160%, 170%) rotate(15deg) scale(1);
+  animation: littleCard3 300ms ease forwards;
 }
 
 .card-group:hover > .little-card:nth-child(5) {
-  transform: translate(-200%, -170%) rotate(15deg) scale(1);
+  animation: littleCard5 300ms ease forwards;
 }
 
 .card-group:hover > .little-card:nth-child(7) {
-  transform: translate(-280%, 140%) rotate(-15deg) scale(1);
+  animation: littleCard7 300ms ease forwards;
 }
 
 
