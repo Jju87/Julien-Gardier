@@ -146,9 +146,13 @@
   @media screen and (max-width:1180px) {
     width: 38vmin;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width:768px) {
     width: 35vmin;
   }
+  @media screen and (min-height: 800px) and (max-width: 1199px) {
+    width: 30vmin;
+  }
+
 }
 .card-groups{
 .card-group {
@@ -172,11 +176,22 @@
       aspect-ratio: 14.5 / 10;
       background-size: cover;
       background-position: center;
-      @media screen and (max-width:1199px) {
+      @media screen and (max-width: 1199px) {
+        left: 40%;
+      }
+      @media screen and (min-height: 800px) and (max-width: 1199px) {
+        left: 36%;
+      }
+      @media screen and (min-height: 800px) and (max-width: 768px) {
         left: 38%;
       }
-      @media screen and (max-width:768px) {
+      @media screen and (max-height:650px) and (max-width:768px){
+        left: 38%;
       }
+      @media screen and (max-height: 800px) and (max-width:768px) {
+        left: 34%;
+      }
+
       &:nth-child(2) {
           background-image: url("../../Assets/Portfolio/Kasa/Kasa-gif.gif");
           transform: translateX(-10%) rotate(-1deg) scale(0.7);
@@ -339,6 +354,12 @@
         padding: 5px;
         @media screen and (max-width: 1200px) {
           width: 11vmin;
+        }
+        @media screen and (max-width:1180px) {
+          top: 40%;
+        }
+        @media screen and (max-width: 768px) {
+          top: 30%;
         }
         &.group-0{
           &:nth-child(1) {

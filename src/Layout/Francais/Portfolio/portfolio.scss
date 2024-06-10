@@ -10,13 +10,17 @@
     position: relative;
     margin-top: 30px;
     @media screen and (min-height: 819px) and (max-width: 1048px){
-        height: 60vh;
+        height: 70vh;
     }
     @media screen and (max-width:768px){
-        height: 55vh;
-    }
-    @media screen and (max-height:700px) and (max-width:768px){
         height: 80vh;
+    }
+    @media screen and (min-height:900px) and (max-width:768px){
+        height: 75vh;
+    }
+
+    @media screen and (max-height:700px) and (max-width:768px){
+        height: 100vh;
     }
     &__container{
         width: 75%;
@@ -77,9 +81,9 @@
                 height: 50px;
                 margin-top: 20px;
                 box-sizing: border-box;
-                @media screen and (max-width: 768px){
+                @media screen and (max-width: 1199px){
                     margin-top:0;
-                    width: 75%;
+                    width: 63%;
                     height: 80px;
                     flex-wrap: wrap;
                     gap:0;
