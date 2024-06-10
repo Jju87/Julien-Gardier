@@ -85,6 +85,7 @@
   }
 }
 
+@media screen and (max-width:1199px){
 .card-group.active > .big-card:nth-child(2) {
   animation: bigCard2 300ms 300ms ease forwards;
 }
@@ -115,6 +116,7 @@
 
 .card-group.active > .little-card:nth-child(7) {
   animation: littleCard7 300ms 300ms ease forwards;
+}
 }
 
 .card-group[data-status="active"] {
@@ -169,7 +171,7 @@
     .big-card {
       border-radius: 1vmin;
       position: absolute;
-      transition: ease 800ms;
+      transition: ease 300ms;
       left: 38%;
       top: 20%;
       border: 1px solid rgb(247, 246, 246, 0.6);
@@ -477,35 +479,38 @@
 
 
 .card-group:hover > .big-card:nth-child(2) {
-  animation: bigCard2 300ms ease forwards;
+  transform: translate(-75%, 16%) rotate(-24deg) scale(1);
+  box-shadow: -1vmin 2vmin 5vmin rgba(255, 255, 255, 0.149);
 }
 
 .card-group:hover > .big-card:nth-child(4) {
-  animation: bigCard4 300ms ease forwards;
+  transform: translate(-5%, -38%) rotate(-8deg);
+  box-shadow: -1vmin 2vmin 5vmin rgba(255, 255, 255, 0.149);
 }
 
 .card-group:hover > .big-card:nth-child(6) {
-  animation: bigCard6 300ms ease forwards;
-}
+  transform: translate(2%, 50%) rotate(8deg);
+  box-shadow: -1vmin 2vmin 5vmin rgba(255, 255, 255, 0.149);}
 
 .card-group:hover > .big-card:nth-child(8) {
-  animation: bigCard8 300ms ease forwards;
+  transform: translate(68%, 26%) rotate(24deg);
+  box-shadow: -1vmin 2vmin 5vmin rgba(255, 255, 255, 0.149);
 }
 
 .card-group:hover > .little-card:nth-child(1) {
-  animation: littleCard1 300ms ease forwards;
+  transform: translate(200%, -160%) rotate(-15deg) scale(1);
 }
 
 .card-group:hover > .little-card:nth-child(3) {
-  animation: littleCard3 300ms ease forwards;
+  transform: translate(160%, 170%) rotate(15deg) scale(1);
 }
 
 .card-group:hover > .little-card:nth-child(5) {
-  animation: littleCard5 300ms ease forwards;
+  transform: translate(-200%, -170%) rotate(15deg) scale(1);
 }
 
 .card-group:hover > .little-card:nth-child(7) {
-  animation: littleCard7 300ms ease forwards;
+  transform: translate(-280%, 140%) rotate(-15deg) scale(1);
 }
 
 

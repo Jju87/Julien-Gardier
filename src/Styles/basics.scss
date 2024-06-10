@@ -82,6 +82,13 @@ body{
     overflow-x: hidden;
     font-size: 100%;
     color: white;
+    -webkit-animation-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; // Désactive le menu contextuel sur iOS
+    -webkit-user-select: none; // Désactive la sélection de texte
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 ol,
 ul {
@@ -96,4 +103,4 @@ a{
     font-family: 'Montserrat', sans-serif;
     width: 100vw;
 }
-
+// Prevents the blue highlight on mobile
