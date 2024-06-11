@@ -220,7 +220,7 @@ const projectsContent = [
                 <div className="projects-container__text">
                     <section>
                     <h3> <FontAwesomeIcon icon={faBookOpen} /> Scénario</h3>
-                    <p>Optimisation SEO pour le site de Nina Carducci, une photographe, selon ses demandes indiquées dans son mail. Un rapport détaillé de l'intervention sera fourni.</p>                    </section>
+                    <p>Optimisation SEO pour le site de Nina Carducci, une photographe, selon ses demandes indiquées dans son mail. Un rapport détaillé de l'intervention est fourni.</p>                    </section>
                     <section>
                     <h3> <FontAwesomeIcon icon={faCode} /> Compétences requises</h3>
                     <ul>

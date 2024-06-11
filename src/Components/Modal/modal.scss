@@ -7,21 +7,27 @@
     100% {
         opacity: 1;
     }
+}
 
+@keyframes appearBg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.2;
+    }
 }
 
 @keyframes colorPulse {
     0% {
-        transform: scale(1);
         color: white;
     }
     50% {
-        transform: scale(0.97);
-        color:$primary-color;
-        background: rgba(200, 189, 220, 0.7);
+        background: rgba(200, 189, 220, 0.2);
+        backdrop-filter: blur(4px);
+        border: 1px transparent solid;
     }
     100%{
-        transform: scale(1);
         color: white;
     }
 
@@ -197,10 +203,18 @@
                         @media screen and (max-width:768px){
                             padding: 5px 0px;
                             align-items: center;
+                            border-left: 1px solid white;
+                            border-bottom: 1px solid white;
+                            border-right: 1px solid white;
+                            border-top: none;
+                            border-radius: 0px 0px 20px 20px;
                         }
                         section{
                             @media screen and (max-width:1199px){
-                            margin-bottom: 10px;
+                                margin-bottom: 10px;
+                            @media screen and (max-width:768px){
+                                margin-bottom: 50px;
+                            }
                         }
                         }
                         & h3{
@@ -210,6 +224,7 @@
                             text-align: justify;
                             @media screen and (max-width:1199px){
                                 padding: 0px 20px;
+                                text-align: center;
                             }
                         }
                         & p{
@@ -219,6 +234,7 @@
                             text-align: justify;
                             @media screen and (max-width:1199px){
                                 padding: 0px 20px;
+                                text-align: center;
                             }
 
                         }                        
@@ -229,6 +245,7 @@
                                 margin-left: 15px;
                             @media screen and (max-width:1199px){
                                 padding: 0px 20px;
+                                text-align: center;
                             }
                         }
                     }
@@ -252,7 +269,9 @@
                             padding: 10px;
                             flex-direction: column;
                             gap: 20px;
-                            height: 250px;                            
+                            height: 250px;
+                            border-top: 1px solid white;
+                            border-radius: 60px;
                         }
                         & a{
                             color: white;
@@ -264,22 +283,20 @@
 
                             }
                             @media screen and (max-width: 768px) {
-                                font-size: 1.6rem;
+                                font-size: 1.4rem;
                             }
                         }
                         &--website a{ 
                             @media screen and (max-width:768px){
                                 display: block;
                                 border: 1px solid white;
-                                padding: 10px 20px;
+                                padding: 10px 15px;
                                 width: 200px;
                                 white-space: no-wrap;
                                 overflow: hidden;
                                 text-align: center;
-                                border-radius: 30px;
-                                font-size: 1.7rem;
-                                animation: colorPulse 2200ms infinite ease ;
-
+                                border-radius: 20px;
+                                animation: colorPulse 2500ms infinite ease ;
                             }
                         }
 
@@ -299,8 +316,9 @@
             height: 100%;
             background-position: left;
             background-repeat: no-repeat;
-            opacity: 0.2;
+            opacity: 0;
             z-index: -1;
+            animation: appearBg 1000ms ease-in-out forwards;
             }
         }
       }
@@ -385,8 +403,37 @@
             @media screen and (max-width:768px){
                 margin-top:0px;
             }
-          }
-
+            & .projects-container{
+                &__links{
+                    &--website a{ 
+                        @media screen and (max-width:768px){
+                            display: inline;
+                            border: none;
+                            padding: 0px;
+                            width: 200px;
+                            white-space: no-wrap;
+                            overflow: hidden;
+                            text-align: center;
+                            border-radius: none;
+                            animation: none;
+                        }
+                    }
+                    &--pdf a{
+                        @media screen and (max-width:768px){
+                            display: block;
+                            border: 1px solid white;
+                            padding: 10px 15px;
+                            width: 200px;
+                            white-space: no-wrap;
+                            overflow: hidden;
+                            text-align: center;
+                            border-radius: 20px;
+                            animation: colorPulse 2500ms infinite ease ;
+                        }
+                    }
+                }
+            }
+        }
         & #ninaImg{
             width: 450px;
             height: auto;
