@@ -1,5 +1,5 @@
 import './contact.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
 
@@ -23,10 +23,10 @@ function Contact () {
     const [emailResult, setEmailResult] = useState(null);
 
     const sendEmail = (e) => {
-    e.preventDefault();
-    setIsSending(true);
+        e.preventDefault();
+        setIsSending(true);
 
-    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE , e.target, process.env.REACT_APP_EMAILJS_SERVICE_KEY)
+        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE , e.target, process.env.REACT_APP_EMAILJS_SERVICE_KEY)
         .then((result) => {
             console.log(result.text);
             setEmailResult(result.text);
@@ -42,7 +42,34 @@ function Contact () {
             setEmailResult(error.text);
             setIsSending(false);
         });
-}
+    }
+    useEffect(() => {
+        const observerPhone = new IntersectionObserver(entries => {
+            const phoneBtn = document.querySelector('.phone-btn');
+            const span = phoneBtn.querySelector('a span');
+            if (entries[0].isIntersecting) {
+                if (phoneBtn) {
+                    if (span) {
+                        span.style.transform = 'translateY(0px)';
+                        span.style.opacity = '1';
+                    }
+                }
+            } else {
+                span.style.transform = 'translateY(-100px)';
+                span.style.opacity = '0';
+            }
+        }, { threshold: 0.5});
+    
+        const callMe = document.querySelector('.contact__content--links-image');
+        if (callMe) {
+            observerPhone.observe(callMe);
+        }
+        return () => {
+            if (callMe) {
+                observerPhone.unobserve(callMe);
+            }
+        };
+    }, []);
 
     return (
         <section id="contact" className="contact">

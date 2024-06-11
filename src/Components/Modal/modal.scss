@@ -203,9 +203,9 @@
                         @media screen and (max-width:768px){
                             padding: 5px 0px;
                             align-items: center;
-                            border-left: 1px solid white;
-                            border-bottom: 1px solid white;
-                            border-right: 1px solid white;
+                            border-left: 1px solid rgba(235,235,235,0.2);
+                            border-bottom: 1px solid rgba(235,235,235,0.2);
+                            border-right: 1px solid rgba(235,235,235,0.2);
                             border-top: none;
                             border-radius: 0px 0px 20px 20px;
                         }
@@ -224,6 +224,8 @@
                             text-align: justify;
                             @media screen and (max-width:1199px){
                                 padding: 0px 20px;
+                            }
+                            @media screen and (max-width: 768px){
                                 text-align: center;
                             }
                         }
@@ -234,6 +236,8 @@
                             text-align: justify;
                             @media screen and (max-width:1199px){
                                 padding: 0px 20px;
+                            }
+                            @media screen and (max-width: 768px){
                                 text-align: center;
                             }
 
@@ -245,6 +249,8 @@
                                 margin-left: 15px;
                             @media screen and (max-width:1199px){
                                 padding: 0px 20px;
+                            }
+                            @media screen and (max-width:768px) {
                                 text-align: center;
                             }
                         }
@@ -270,7 +276,7 @@
                             flex-direction: column;
                             gap: 20px;
                             height: 250px;
-                            border-top: 1px solid white;
+                            border-top: 1px solid rgba(235,235,235,0.2);
                             border-radius: 60px;
                         }
                         & a{
