@@ -1,10 +1,17 @@
 // Reset
-*{
+*{  
+    -webkit-animation-tap-highlight-color: unset;
+    -webkit-touch-callout: none; // Désactive le menu contextuel sur iOS
+    -webkit-user-select: none; // Désactive la sélection de texte
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     box-sizing: border-box;
 }
 html{
     font-size: 62.5%; /* 1rem = 10px */
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 div,
 span,
@@ -82,13 +89,6 @@ body{
     overflow-x: hidden;
     font-size: 100%;
     color: white;
-    -webkit-animation-tap-highlight-color: transparent;
-    -webkit-touch-callout: none; // Désactive le menu contextuel sur iOS
-    -webkit-user-select: none; // Désactive la sélection de texte
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 ol,
 ul {

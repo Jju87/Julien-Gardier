@@ -214,8 +214,8 @@
                         justify-content: center;
                         & span{
                             display: flex;
-                            justify-content: space-between;
-                            width: 70%;
+                            justify-content: space-evenly;
+                            width: 80%;
                             height: 25px;
                             overflow: hidden;
                             margin-top: 50px;
@@ -226,6 +226,12 @@
                             opacity: 0;
                             transform: translateY(-100px);
                             transition: 300ms ease;
+                            white-space: no-wrap;
+                            @media screen and (max-width:1199px) {
+                                font-size: 1.4rem;
+                                width: 85%;
+                            
+                            }
                         }
                     }
                     &:hover a span{

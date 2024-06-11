@@ -188,7 +188,7 @@
                 height: 400px;
                 width: 293px;
                 z-index: 1;
-                position: relative;
+                position: absolute;
                 filter: drop-shadow(20px 10px 20px rgba(0,0,0,0.7));
                 @media screen and (max-width: 1200px){
                     height: 300px;
