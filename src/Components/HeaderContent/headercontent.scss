@@ -146,6 +146,7 @@
         }
     }
     .portrait-container{
+        overflow: hidden;
         opacity: 0;
         width: 50%;
         display: flex;
