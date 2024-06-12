@@ -187,8 +187,8 @@
             }
             &--portrait2{
                 clip-path: inset(0 0 0 0);
-                height: 400px;
-                width: 293px;
+                height: 100%;
+                width: 100%;
                 z-index: -1;
                 top: 0;
                 left: 0;
@@ -196,8 +196,8 @@
                 position: absolute;
                 filter: drop-shadow(20px 10px 20px rgba(0,0,0,0.7));
                 @media screen and (max-width: 1200px){
-                    height: 300px;
-                    width: 220px;
+                    height: 100%;
+                    width: 100%;
                 }
             }
             @media not all and (min-resolution:.001dpcm) { /* Safari-only styles */
@@ -206,6 +206,7 @@
                     width: auto;
                     max-height: 100%;
                     max-width: 100%;
+                    clip-path: unset;
                 }
             }
         }  
