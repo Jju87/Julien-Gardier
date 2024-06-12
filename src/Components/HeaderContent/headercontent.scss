@@ -188,6 +188,9 @@
                 height: 400px;
                 width: 293px;
                 z-index: 1;
+                top: 0;
+                left: 0;
+                object-fit: cover;
                 position: absolute;
                 filter: drop-shadow(20px 10px 20px rgba(0,0,0,0.7));
                 @media screen and (max-width: 1200px){
@@ -195,6 +198,14 @@
                     width: 220px;
                 }
             }
+            @media not all and (min-resolution:.001dpcm) { /* Safari-only styles */
+                .portrait-container__frame--portrait2 {
+                    height: auto;
+                    width: auto;
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+            }add
         }  
         .portrait-container__strengths{
             position: absolute;
