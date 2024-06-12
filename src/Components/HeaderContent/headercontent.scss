@@ -182,12 +182,14 @@
             position: relative;
             box-shadow: inset -6px 4px 10px rgba(0,0,0,0.5);
             object-fit: cover;
+            clip-path: inset(-50px -50px -50px -50px);
+
             @media screen and (max-width: 1200px){
                 height: 300px;
                 width: 220px;
             }
             &--portrait2{
-                clip-path: inset(0 0 0 0);
+                clip-path: inset(-50px -50px -50px -50px);
                 height: 100%;
                 width: 100%;
                 z-index: -1;
