@@ -176,6 +176,7 @@
             border: 1.5px solid white;
             overflow: hidden;
             border-radius: 41% 59% 53% 47% / 30% 64% 36% 70% ;
+            animation: morph ease-in-out 12s infinite;
             z-index: 5;
             position: relative;
             box-shadow: inset -6px 4px 10px rgba(0,0,0,0.5);
@@ -185,6 +186,7 @@
                 width: 220px;
             }
             &--portrait2{
+                clip-path: inset(0 0 0 0);
                 height: 400px;
                 width: 293px;
                 z-index: -1;
