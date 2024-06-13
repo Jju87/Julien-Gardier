@@ -200,6 +200,7 @@
                 filter: drop-shadow(20px 10px 20px rgba(0,0,0,0.7));
                 overflow: hidden;
                 overflow: clip;
+                border-radius: inherit;
                 @media screen and (max-width: 1200px){
                     height: 100%;
                     width: 100%;
