@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import portrait2 from '../../Assets/Images/Portrait-fond-transparent.webp'
 import SkillsBox from '../SkillsBox/SkillsBox.jsx';
 import './headercontent.scss';
 
@@ -14,7 +13,7 @@ function HeaderContent() {
 
     useEffect(()=>{
         const img = new Image();
-        img.src = portrait2;
+        img.src = "https://julien-gardier.com/Portrait-fond-transparent.png";
     },[]);
 
     const randomSpeed = (min, max) => { 
@@ -66,7 +65,7 @@ function HeaderContent() {
       </div>
       <div className="portrait-container">
         <div className="portrait-container__frame">
-            <img src={portrait2} className="portrait-container__frame--portrait2" alt="portrait de Julien Gardier, développeur web"/>
+            <img src="https://julien-gardier.com/Portrait-fond-transparent.png" className="portrait-container__frame--portrait2" alt="portrait de Julien Gardier, développeur web"/>
         </div>
         <div className="portrait-container__strengths">
             < SkillsBox 
