@@ -80,11 +80,11 @@ function Contact () {
                         <form onSubmit={sendEmail}>
                             <div className="inputs">
                                 <FontAwesomeIcon icon={faEnvelope} className="inputs__icon" />                                
-                                <label htmlFor="from_name"></label>
-                                <input type="text" name="from_name" id="nom" required placeholder="Votre nom" />
-                                <label htmlFor="email"></label>
+                                <label htmlFor="from_name" className="visually-hidden">Nom</label>
+                                <input type="text" name="from_name" id="from_name" required placeholder="Votre nom" />
+                                <label htmlFor="email" className="visually-hidden">Email</label>
                                 <input type="email" name="email" id="email" required placeholder="Votre email" />
-                                <label htmlFor="message"></label>
+                                <label htmlFor="message" className="visually-hidden">Message</label>
                                 <textarea name="message" id="message" required placeholder="Votre message"></textarea>
                             </div>
                             <div className="captcha" style={{overflow: "hidden" }}>
