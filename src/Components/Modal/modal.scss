@@ -440,6 +440,7 @@
             }
         }
         & #ninaImg{
+            animation: appear 500ms ease-in-out;
             width: 450px;
             height: auto;
             object-fit: cover;
