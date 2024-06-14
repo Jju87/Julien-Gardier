@@ -8,10 +8,47 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
-  </head>
+    <link rel="preload" href="/Portrait-fond-transparent.png" as="image">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://julien-gardier.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Julien Gardier - Portfolio">
+    <meta property="og:description" content="Découvrez le portfolio de Julien Gardier, développeur web MERN (Mongo, React, Express, Nodejs).">
+    <meta property="og:image" content="/Portrait-fond-transparent.png">
+    <meta property="og:image:alt" content="Portrait de Julien Gardier, développeur web">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://julien-gardier.com">
+    <meta property="twitter:url" content="https://julien-gardier.com">
+    <meta name="twitter:title" content="Julien Gardier - Portfolio">
+    <meta name="twitter:description" content="Découvrez le portfolio de Julien Gardier, développeur web MERN (Mongo, React, Express, Nodejs).">
+    <meta name="twitter:image" content="/Portrait-fond-transparent.png">
+    <meta name="twitter:image:alt" content="Portrait de Julien Gardier, développeur Web (MERN-stack)">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Julien Gardier - Développeur Web MERN-Stack",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Yerres",
+          "postalCode": "91330",
+          "addressRegion": "Essonne",
+          "addressCountry": "FR"
+        },
+        "openingHours": "Mo-Fr 10:00-19:00",
+        "priceRange": "50€ - 400€",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/Portrait-fond-transparent.png",
+          "width": "300",
+          "height": "200"
+        }
+    }
+    </script>
+  </head>  
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="julienGardier"></div>
