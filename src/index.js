@@ -4,18 +4,20 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Accueil from './Pages/Accueil/Accueil';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 
 import '../src/Styles/main.scss';
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const julienGardier = ReactDOM.createRoot(document.getElementById('julienGardier'));
+julienGardier.render(
 <React.StrictMode>
         <Router>         
                 <Routes>
                     <Route path="/" element={<Accueil />} />
                     <Route path="/eng/" element={<Accueil />} />
+                    <Route path="*" element={<ErrorPage />} /> 
                 </Routes>          
         </Router>
-    </React.StrictMode>
+</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
