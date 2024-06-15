@@ -1,5 +1,4 @@
 import "./skillsdisplay.scss";
-import React, { useEffect } from "react";
 import htmlIcon from "../../Assets/Icons/html-icon.svg";
 import cssIcon from "../../Assets/Icons/css-icon.svg";
 import jsIcon from "../../Assets/Icons/javascript-icon.svg";
