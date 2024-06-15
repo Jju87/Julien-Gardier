@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Modal from '../../Components/Modal/Modal';
-import projectsContent from '../../data/projectscontent.jsx';
-import './cardcarousel.scss';
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faCircleChevronLeft,
+    faCircleChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import Modal from "../../Components/Modal/Modal";
+import projectsContent from "../../data/projectscontent.jsx";
+import "./cardcarousel.scss";
 
 function CardCarousel({ filter }) {
     const totalGroups = projectsContent.length;
@@ -12,14 +15,14 @@ function CardCarousel({ filter }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
     const [selectedProjectId, setSelectedProjectId] = useState(null);
-    const [key, setKey] = useState(Math.random())
+    const [key, setKey] = useState(Math.random());
 
     // Filter projects by group
     const isGroupVisible = (filter, index) => {
-        if (filter === 'Tout') return true;
-        if (filter === 'Frontend' && (index === 0 || index === 3)) return true;
-        if (filter === 'Backend' && (index === 1 || index === 2)) return true;
-        if (filter === 'Optimisation' && index === 4) return true;
+        if (filter === "Tout") return true;
+        if (filter === "Frontend" && (index === 0 || index === 3)) return true;
+        if (filter === "Backend" && (index === 1 || index === 2)) return true;
+        if (filter === "Optimisation" && index === 4) return true;
         return false;
     };
 
@@ -36,19 +39,24 @@ function CardCarousel({ filter }) {
     }, [filter]);
 
     const handleLeftClick = () => {
-        
-        setCurrentIndex(oldIndex => oldIndex === 0 ? visibleGroups.length - 1 : oldIndex - 1);
+        setCurrentIndex((oldIndex) =>
+            oldIndex === 0 ? visibleGroups.length - 1 : oldIndex - 1
+        );
         // if oldIndex === 0, set currentIndex to the last index of visibleGroups array , if not, set currentIndex to oldIndex - 1
     };
 
     const handleRightClick = () => {
-        setCurrentIndex(oldIndex => oldIndex === visibleGroups.length - 1 ? 0 : oldIndex + 1);
+        setCurrentIndex((oldIndex) =>
+            oldIndex === visibleGroups.length - 1 ? 0 : oldIndex + 1
+        );
         // if oldIndex === last index of visibleGroups array, set currentIndex to 0, if not, set currentIndex to oldIndex + 1
     };
 
     const handleCardGroupClick = (index) => {
         // Find the project content based on the index of the clicked card group, source is projectsContent.jsx
-        const projectContent = projectsContent.find(project => project.id === index);
+        const projectContent = projectsContent.find(
+            (project) => project.id === index
+        );
         // console.log(`opening ${projectContent.title} modal`);
         setModalContent(projectContent.content);
         setSelectedProjectId(projectContent.id);
@@ -62,28 +70,58 @@ function CardCarousel({ filter }) {
         <>
             <div className="card-groups">
                 {visibleGroups.map((index, visibleIndex) => (
-                    <div className={
-                        `card-group ${visibleIndex === currentIndex ? 'active' : ''}`} 
-                        data-status={visibleIndex === currentIndex ? 'active' : visibleIndex < currentIndex ? 'before' : 'after'} 
+                    <div
+                        className={`card-group ${
+                            visibleIndex === currentIndex ? "active" : ""
+                        }`}
+                        data-status={
+                            visibleIndex === currentIndex
+                                ? "active"
+                                : visibleIndex < currentIndex
+                                ? "before"
+                                : "after"
+                        }
                         key={index}
-                        onClick={() =>{
-                         handleCardGroupClick(index);
-                         console.log(`Card group ${index} clicked. Modal open status: ${isModalOpen}`);
+                        onClick={() => {
+                            handleCardGroupClick(index);
+                            console.log(
+                                `Card group ${index} clicked. Modal open status: ${isModalOpen}`
+                            );
                         }}
                     >
-                        <div className={`little-card card group-${index}`}></div>
+                        <div
+                            className={`little-card card group-${index}`}
+                        ></div>
                         <div className={`big-card card group-${index}`}></div>
-                        <div className={`little-card card group-${index}`}></div>
+                        <div
+                            className={`little-card card group-${index}`}
+                        ></div>
                         <div className={`big-card card group-${index}`}></div>
-                        <div className={`little-card card group-${index}`}></div>
+                        <div
+                            className={`little-card card group-${index}`}
+                        ></div>
                         <div className={`big-card card group-${index}`}></div>
-                        <div className={`little-card card group-${index}`}></div>
+                        <div
+                            className={`little-card card group-${index}`}
+                        ></div>
                         <div className={`big-card card group-${index}`}></div>
                     </div>
                 ))}
-                <div className={visibleGroups.length > 1 ? "arrows" : "arrows__hidden"}>
-                    <FontAwesomeIcon className="arrows__left" icon={faCircleChevronLeft} onClick={handleLeftClick} />
-                    <FontAwesomeIcon className="arrows__right" icon={faCircleChevronRight} onClick={handleRightClick} />
+                <div
+                    className={
+                        visibleGroups.length > 1 ? "arrows" : "arrows__hidden"
+                    }
+                >
+                    <FontAwesomeIcon
+                        className="arrows__left"
+                        icon={faCircleChevronLeft}
+                        onClick={handleLeftClick}
+                    />
+                    <FontAwesomeIcon
+                        className="arrows__right"
+                        icon={faCircleChevronRight}
+                        onClick={handleRightClick}
+                    />
                 </div>
             </div>
             <span className="counter">

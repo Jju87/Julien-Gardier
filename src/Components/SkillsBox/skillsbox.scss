@@ -1,12 +1,16 @@
 @import "../../Styles/variables.scss";
 
-.skillsbox{
+.skillsbox {
     position: relative;
     width: 150px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 13px;
-    background: linear-gradient(105deg, rgba(103, 137, 186, 0.6) 30%, rgba(255, 255, 255, 1) 31%);
+    background: linear-gradient(
+        105deg,
+        rgba(103, 137, 186, 0.6) 30%,
+        rgba(255, 255, 255, 1) 31%
+    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,44 +21,51 @@
     box-shadow: -2px 3px 4px rgba(0, 0, 0, 0.5);
     z-index: 2;
     margin-left: 5px;
-    @media screen and (max-width: 1199px){
+    @media screen and (max-width: 1199px) {
         width: 140px;
-        height: 45; 
-        padding: 10px; 
-        background: linear-gradient(104deg, rgba(103, 137, 186, 0.6) 28%, rgba(255,255,255,1) 29%);  
+        height: 45;
+        padding: 10px;
+        background: linear-gradient(
+            104deg,
+            rgba(103, 137, 186, 0.6) 28%,
+            rgba(255, 255, 255, 1) 29%
+        );
     }
-    @media screen and (max-width:768px){
+    @media screen and (max-width: 768px) {
         width: 130px;
         height: 40px;
     }
-    @media screen and (max-width: 468px){
+    @media screen and (max-width: 468px) {
         width: 120px;
     }
 
-    .cross{
+    .cross {
         width: 20px;
         height: 20px;
         color: #fff;
-        @media screen and (max-width: 1199px){
+        @media screen and (max-width: 1199px) {
             width: 17px;
             height: 17px;
-            
         }
     }
-    p{  
+    p {
         padding-left: 15px;
         font-size: 1.3rem;
         font-weight: 600;
-        background: linear-gradient(159deg, $primary-color 50%, rgba(166,104,193,0.9948354341736695) 100%);
+        background: linear-gradient(
+            159deg,
+            $primary-color 50%,
+            rgba(166, 104, 193, 0.9948354341736695) 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        @media screen and (max-width: 1199px){
+        @media screen and (max-width: 1199px) {
             font-size: 1.2rem;
         }
-        @media screen and (max-width:768px){
-            font-size:1.1rem;
+        @media screen and (max-width: 768px) {
+            font-size: 1.1rem;
         }
-        @media screen and (max-width: 468px){
+        @media screen and (max-width: 468px) {
             font-size: 1rem;
             padding-left: 13px;
         }

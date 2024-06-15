@@ -1,151 +1,158 @@
-@import '../../Styles/variables.scss';
+@import "../../Styles/variables.scss";
 
 @keyframes blink {
-    from, to{
+    from,
+    to {
         border-color: transparent;
     }
-    50%{
-        border-color: white;    
+    50% {
+        border-color: white;
     }
 }
 
-@keyframes from-right{
-    from{
+@keyframes from-right {
+    from {
         transform: translateX(300%);
     }
-    to{
+    to {
         transform: translateX(0);
     }
-
 }
 
 @keyframes appear {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+    to {
         opacity: 1;
     }
-
 }
 
 @keyframes morph {
-    0% { border-radius: 41% 59% 53% 47% / 30% 64% 36% 70%; }
-    37% { border-radius: 100% 78% 70% 100% / 71% 65% 94% 94% ; }
-    59% { border-radius: 100% 100% 100% 100% / 100% 100% 100% 100% ; }
-    79% { border-radius: 81% 78% 100% 73% / 90% 83% 87% 64%  ; }
-    100% { border-radius: 41% 59% 53% 47% / 30% 64% 36% 70%; }
+    0% {
+        border-radius: 41% 59% 53% 47% / 30% 64% 36% 70%;
+    }
+    37% {
+        border-radius: 100% 78% 70% 100% / 71% 65% 94% 94%;
+    }
+    59% {
+        border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+    }
+    79% {
+        border-radius: 81% 78% 100% 73% / 90% 83% 87% 64%;
+    }
+    100% {
+        border-radius: 41% 59% 53% 47% / 30% 64% 36% 70%;
+    }
 }
 
-.header-content{
+.header-content {
     width: 75%;
     height: auto;
     max-width: 1200px;
     display: flex;
     justify-content: center;
-    @media screen and (max-width: 1200px){
-        width: 90%;        
+    @media screen and (max-width: 1200px) {
+        width: 90%;
     }
-    @media screen and (max-width:768px){
+    @media screen and (max-width: 768px) {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
         height: 90vh;
         width: 95%;
     }
-    @media screen and (max-height: 450px) and (max-width:935px){
+    @media screen and (max-height: 450px) and (max-width: 935px) {
         height: 130vh;
     }
 
-    .introduction{
+    .introduction {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: start;
-        @media screen and (max-width:768px){
+        @media screen and (max-width: 768px) {
             width: 100%;
             align-items: center;
         }
-        &__welcome{
+        &__welcome {
             letter-spacing: 0.03em;
             opacity: 0;
             font-size: 2.2rem;
             font-weight: 600;
             animation: appear ease 400ms 1200ms forwards;
-            @media screen and (max-width: 1200px){
+            @media screen and (max-width: 1200px) {
                 font-size: 1.8rem;
             }
-            @media screen and (max-width: 1048px){
+            @media screen and (max-width: 1048px) {
                 font-size: 1.6rem;
             }
         }
-        &__name{
+        &__name {
             letter-spacing: 0.03em;
             opacity: 0;
             font-size: 5.6rem;
             animation: appear ease 400ms 1600ms forwards;
-            @media screen and (max-width: 1200px){
+            @media screen and (max-width: 1200px) {
                 font-size: 4.6rem;
             }
-            @media screen and (max-width: 1048px){
+            @media screen and (max-width: 1048px) {
                 font-size: 4.2rem;
             }
-            @media screen and (max-width: 768px){
+            @media screen and (max-width: 768px) {
                 font-size: 3.8rem;
-                
             }
             span {
                 color: $secondary-color;
                 font-size: 5.6rem;
                 letter-spacing: 0.03em;
-                font-weight:700;
-                @media screen and (max-width: 1200px){
+                font-weight: 700;
+                @media screen and (max-width: 1200px) {
                     font-size: 4.6rem;
                 }
-                @media screen and (max-width: 1048px){
+                @media screen and (max-width: 1048px) {
                     font-size: 4.2rem;
                 }
-                @media screen and (max-width: 768px){
+                @media screen and (max-width: 768px) {
                     font-size: 3.8rem;
-                    
                 }
             }
         }
-        &__skills{
+        &__skills {
             font-size: 3.2rem;
             border-right: 0.12em solid white;
             letter-spacing: 0.07em;
             font-weight: 700;
             display: block;
             animation: blink 1000ms step-end infinite;
-            @media screen and (max-width: 1200px){
+            @media screen and (max-width: 1200px) {
                 font-size: 2.6rem;
             }
-            @media screen and (max-width: 1048px){
+            @media screen and (max-width: 1048px) {
                 font-size: 2.4rem;
             }
-            @media screen and (max-width: 768px){
+            @media screen and (max-width: 768px) {
                 font-size: 2rem;
             }
-            &--transparent{
-                color: transparent; 
-                font-weight:700;
+            &--transparent {
+                color: transparent;
+                font-weight: 700;
                 font-size: 3.2rem;
                 border-color: transparent;
-                @media screen and (max-width: 1200px){
+                @media screen and (max-width: 1200px) {
                     font-size: 2.6rem;
                 }
-                @media screen and (max-width: 1048px){
+                @media screen and (max-width: 1048px) {
                     font-size: 2.4rem;
                 }
-                @media screen and (max-width: 768px){
+                @media screen and (max-width: 768px) {
                     font-size: 2rem;
                 }
             }
         }
     }
-    .portrait-container{
+    .portrait-container {
         overflow: hidden;
         opacity: 0;
         width: 50%;
@@ -154,41 +161,41 @@
         align-items: center;
         position: relative;
         animation: appear 600ms 200ms ease-in-out forwards;
-        @media screen and (max-width:768px){
+        @media screen and (max-width: 768px) {
             width: 60%;
             align-items: center;
             justify-content: center;
         }
-        @media screen and (max-width:668px){
+        @media screen and (max-width: 668px) {
             width: 70%;
         }
-        @media screen and (max-width: 568px){
+        @media screen and (max-width: 568px) {
             width: 80%;
         }
-        @media screen and (max-width: 508px){
+        @media screen and (max-width: 508px) {
             width: 90%;
         }
-        @media screen and (max-width: 468px){
-            width: 100%
+        @media screen and (max-width: 468px) {
+            width: 100%;
         }
-        &__frame{
+        &__frame {
             height: 400px;
             width: 293px;
             border: 1.5px solid white;
             overflow: hidden;
             overflow: clip;
-            border-radius: 41% 59% 53% 47% / 30% 64% 36% 70% ;
+            border-radius: 41% 59% 53% 47% / 30% 64% 36% 70%;
             animation: morph ease-in-out 12s infinite;
             z-index: 5;
             position: relative;
-            box-shadow: inset -6px 4px 10px rgba(0,0,0,0.5);
+            box-shadow: inset -6px 4px 10px rgba(0, 0, 0, 0.5);
             object-fit: cover;
             clip-path: inset(0 0 0 0);
-            @media screen and (max-width: 1200px){
+            @media screen and (max-width: 1200px) {
                 height: 300px;
                 width: 220px;
             }
-            &--portrait2{
+            &--portrait2 {
                 clip-path: inset(0 0 0 0);
                 height: 100%;
                 width: 100%;
@@ -197,23 +204,22 @@
                 left: 0;
                 position: absolute;
                 object-fit: cover;
-                filter: drop-shadow(20px 10px 20px rgba(0,0,0,0.7));
+                filter: drop-shadow(20px 10px 20px rgba(0, 0, 0, 0.7));
                 overflow: hidden;
                 overflow: clip;
                 border-radius: inherit;
                 transform: translateZ(0);
-                @media screen and (max-width: 1200px){
+                @media screen and (max-width: 1200px) {
                     height: 100%;
                     width: 100%;
                 }
             }
         }
-        
 
-        .portrait-container__strengths{
+        .portrait-container__strengths {
             position: absolute;
-            top:0;
-            left:252px;
+            top: 0;
+            left: 252px;
             width: 400px;
             height: 100%;
             display: flex;
@@ -223,15 +229,15 @@
             gap: 10px;
             z-index: 20;
             animation: from-right ease-in-out forwards 1000ms;
-            @media screen and (max-width: 1200px){
+            @media screen and (max-width: 1200px) {
                 left: 180px;
                 width: 300px;
             }
-            @media screen and (max-width:768px){
+            @media screen and (max-width: 768px) {
                 width: 100%;
                 left: auto;
                 align-items: flex-end;
-            }  
-        }       
+            }
+        }
     }
 }

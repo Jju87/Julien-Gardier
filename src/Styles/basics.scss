@@ -1,5 +1,5 @@
 // Reset
-*{  
+* {
     -webkit-animation-tap-highlight-color: unset;
     -webkit-touch-callout: none; // Désactive le menu contextuel sur iOS
     -webkit-user-select: none; // Désactive la sélection de texte
@@ -9,7 +9,7 @@
     user-select: none;
     box-sizing: border-box;
 }
-html{
+html {
     font-size: 62.5%; /* 1rem = 10px */
     scroll-behavior: smooth;
 }
@@ -81,7 +81,7 @@ figcaption,
 footer,
 nav,
 section,
-body{
+body {
     margin: 0;
     padding: 0;
     border: 0;
@@ -94,13 +94,13 @@ ol,
 ul {
     list-style: none;
 }
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 // End reset
-#julienGardier{
-    font-family: 'Montserrat', sans-serif;
+#julienGardier {
+    font-family: "Montserrat", sans-serif;
     width: 100vw;
 }
 // Prevents the blue highlight on mobile

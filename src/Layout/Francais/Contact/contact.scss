@@ -1,7 +1,6 @@
-@import '../../../Styles/variables.scss';
+@import "../../../Styles/variables.scss";
 
-
-.contact{
+.contact {
     width: 100vw;
     height: 100vh;
     background-color: $background-color;
@@ -12,14 +11,13 @@
     justify-content: space-evenly;
     position: relative;
     margin-top: 20px;
-    @media screen and (min-height: 819px) and (max-width: 1048px){
+    @media screen and (min-height: 819px) and (max-width: 1048px) {
         height: 60vh;
     }
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         height: auto;
-
     }
-    &__container{
+    &__container {
         width: 75%;
         height: 100%;
         max-width: 1200px;
@@ -28,41 +26,40 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        @media screen and (max-width: 1200px){
+        @media screen and (max-width: 1200px) {
             width: 90%;
-            
         }
-        & h2{
+        & h2 {
             font-size: 2.5rem;
             color: $primary-font-color;
             text-align: center;
             overflow: hidden;
-            @media screen and (max-width: 768px){
+            @media screen and (max-width: 768px) {
                 font-size: 2.2rem;
                 margin-bottom: 35px;
             }
         }
-        .contact__content{
+        .contact__content {
             width: 100%;
             height: 90%;
             display: flex;
             align-items: center;
-            @media screen and (max-width:768px){
+            @media screen and (max-width: 768px) {
                 flex-direction: column-reverse;
                 gap: 70px;
             }
-            &--form{
+            &--form {
                 width: 50%;
                 height: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 1px;
-                @media screen and (max-width:768px){
+                @media screen and (max-width: 768px) {
                     width: 100%;
                     margin-bottom: 70px;
                 }
-                & form{
+                & form {
                     width: 75%;
                     height: 95%;
                     display: flex;
@@ -70,10 +67,10 @@
                     align-items: center;
                     justify-content: center;
                     gap: 20px;
-                    @media screen and (max-width:1200px) {
+                    @media screen and (max-width: 1200px) {
                         width: 85%;
                     }
-                    @media screen and (max-width:768px) {
+                    @media screen and (max-width: 768px) {
                         width: 85%;
                     }
                     & .visually-hidden {
@@ -86,20 +83,20 @@
                         clip: rect(0, 0, 0, 0);
                         border: 0;
                     }
-                    & .inputs{
+                    & .inputs {
                         width: 100%;
                         height: 60%;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        gap:7px;
-                        &__icon{
+                        gap: 7px;
+                        &__icon {
                             color: $primary-color;
                             font-size: 3.6rem;
                         }
                     }
-                    & .captcha{
+                    & .captcha {
                         width: 100%;
                         height: 85px;
                         overflow: hidden;
@@ -120,7 +117,8 @@
                         }
                     }
                 }
-                & input, textarea{
+                & input,
+                textarea {
                     outline: none;
                     border: none;
                     width: 100%;
@@ -133,34 +131,35 @@
                     resize: none;
                     color: $primary-font-color;
                     font-weight: 400;
-                    font-family: 'montserrat', 'sans-serif';
+                    font-family: "montserrat", "sans-serif";
                 }
-                & input:focus, textarea:focus{
+                & input:focus,
+                textarea:focus {
                     background-color: #fdfdfd;
                 }
-                & textarea{
-                     height: 140px;
+                & textarea {
+                    height: 140px;
                 }
-                & .submit-button{
-                     width: 150px;
-                     height: 50px;
-                     background-color: $primary-color;
-                     color: white;
-                     font-size: 1.6rem;
-                     outline: none;
-                     border: none;
-                     border-radius: 10px;
-                     cursor: pointer;
-                     &:hover{
-                        background-color: rgba(103,137,186,0.8);
-                     }
-                     &.disabled{
+                & .submit-button {
+                    width: 150px;
+                    height: 50px;
+                    background-color: $primary-color;
+                    color: white;
+                    font-size: 1.6rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: rgba(103, 137, 186, 0.8);
+                    }
+                    &.disabled {
                         background-color: #948b8b;
                         cursor: not-allowed;
-                     }
+                    }
                 }
             }
-            &--links{
+            &--links {
                 width: 50%;
                 height: 100%;
                 display: flex;
@@ -168,19 +167,19 @@
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                @media screen and (max-width:768px){
+                @media screen and (max-width: 768px) {
                     width: 80%;
                 }
-                & .phone-volume{
+                & .phone-volume {
                     color: $primary-color;
                     font-size: 3.6rem;
                     transform: translateY(-36px);
-                    @media screen and (max-width:768px) {
+                    @media screen and (max-width: 768px) {
                         transform: translateY(0px);
                         margin-bottom: 13px;
                     }
                 }
-                &-image{
+                &-image {
                     width: 266px;
                     height: 360px;
                     display: flex;
@@ -189,23 +188,23 @@
                     position: relative;
                     overflow: hidden;
                     border-radius: 20px;
-                    @media screen and (max-width:768px){    
+                    @media screen and (max-width: 768px) {
                         width: 210px;
                         height: 300px;
                     }
-                    & img{
+                    & img {
                         width: 266px;
                         height: 360px;
                         object-fit: cover;
                         border-radius: 20px;
                         transition: 150ms;
                     }
-                    &:hover img{
-                        scale:(1.1);
+                    &:hover img {
+                        scale: (1.1);
                         transform: rotate(1deg);
                     }
                 }
-                .phone-btn{
+                .phone-btn {
                     top: 0;
                     right: 0;
                     display: flex;
@@ -217,19 +216,19 @@
                     width: 100%;
                     height: 100%;
                     border-radius: 20px;
-                    & a{
+                    & a {
                         width: 100%;
                         height: 100%;
                         display: flex;
                         justify-content: center;
-                        & span{
+                        & span {
                             display: flex;
                             justify-content: space-evenly;
                             width: 80%;
                             height: 25px;
                             overflow: hidden;
                             margin-top: 50px;
-                            font-family: 'montserrat', 'sans-serif';
+                            font-family: "montserrat", "sans-serif";
                             font-size: 1.6rem;
                             font-weight: 500;
                             color: $primary-color;
@@ -237,24 +236,18 @@
                             transform: translateY(-100px);
                             transition: 300ms ease;
                             white-space: no-wrap;
-                            @media screen and (max-width:1199px) {
+                            @media screen and (max-width: 1199px) {
                                 font-size: 1.4rem;
                                 width: 85%;
-                            
                             }
                         }
                     }
-                    &:hover a span{
-                    opacity: 1;
-                    transform: translateY(0);
+                    &:hover a span {
+                        opacity: 1;
+                        transform: translateY(0);
                     }
                 }
             }
         }
     }
 }
-
-
-
-
-                    

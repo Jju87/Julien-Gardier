@@ -1,6 +1,6 @@
 @import "../../../Styles/variables.scss";
 
-footer{
+footer {
     width: 100%;
     height: 120px;
     display: flex;
@@ -8,10 +8,10 @@ footer{
     align-items: center;
     flex-direction: column;
     background-color: $background-color;
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1200px) {
         height: 150px;
     }
-    .footer__container{
+    .footer__container {
         border-top: 0.5px solid #ccc;
         width: 40%;
         height: 100%;
@@ -24,16 +24,16 @@ footer{
         @media screen and (max-width: 768px) {
             width: 80%;
         }
-        &--links{
+        &--links {
             display: flex;
             gap: 20px;
-            a{
+            a {
                 color: $primary-color;
                 font-size: 3.8rem;
                 text-decoration: none;
             }
-            a:hover{
-                color:rgba(103,137,186,0.8);
+            a:hover {
+                color: rgba(103, 137, 186, 0.8);
             }
             & .visually-hidden {
                 position: absolute;
@@ -46,7 +46,7 @@ footer{
                 border: 0;
             }
         }
-        &--copy p{
+        &--copy p {
             color: $primary-font-color;
             font-size: 1.5rem;
         }

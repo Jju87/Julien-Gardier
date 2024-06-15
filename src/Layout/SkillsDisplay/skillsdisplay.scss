@@ -9,15 +9,15 @@
     }
 }
 
-.skills-display{
+.skills-display {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     justify-content: space-evenly;
     height: 220px;
-    background-color: $background-color;   
-    &__container{
+    background-color: $background-color;
+    &__container {
         display: flex;
         flex-direction: column;
         width: 75%;
@@ -28,19 +28,19 @@
         overflow: hidden;
         position: relative;
         background-color: $background-color;
-        @media screen and (max-width: 1200px){
+        @media screen and (max-width: 1200px) {
             width: 90%;
         }
-        & h2{
+        & h2 {
             color: $primary-font-color;
             font-size: 2.5rem;
             overflow: hidden;
-            @media screen and (max-width: 1200px){
+            @media screen and (max-width: 1200px) {
                 font-size: 2.2rem;
             }
         }
     }
-    &__icons{
+    &__icons {
         width: auto;
         display: flex;
         gap: 20px;
@@ -48,19 +48,19 @@
         height: 100px;
         animation: slide 1000s linear infinite;
         overflow: hidden;
-        &--icon{
+        &--icon {
             display: flex;
-            justify-content: space-between  ;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
             width: 83px;
             height: 83px;
         }
-        & img{
+        & img {
             width: 50px;
             height: 50px;
         }
-        & p{
+        & p {
             color: $primary-font-color;
             font-size: 1.6rem;
         }

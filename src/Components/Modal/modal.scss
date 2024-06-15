@@ -27,10 +27,9 @@
         backdrop-filter: blur(4px);
         border: 1px transparent solid;
     }
-    100%{
+    100% {
         color: white;
     }
-
 }
 
 .modal__content::-webkit-scrollbar {
@@ -44,28 +43,32 @@
 }
 
 .modal {
-    &.modal-0, &.modal-1, &.modal-2, &.modal-3, &.modal-4{
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    pointer-events: none;
-    background-color: rgba(34, 33, 33, 0.85);
-    transition: 100ms ease-in-out;
-    visibility: hidden;
-    transform: scale(0);
-    &.open {
-        opacity: 1;
-        pointer-events: all;
-        visibility: visible;
-        transform: scale(1);
-    }
+    &.modal-0,
+    &.modal-1,
+    &.modal-2,
+    &.modal-3,
+    &.modal-4 {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        pointer-events: none;
+        background-color: rgba(34, 33, 33, 0.85);
+        transition: 100ms ease-in-out;
+        visibility: hidden;
+        transform: scale(0);
+        &.open {
+            opacity: 1;
+            pointer-events: all;
+            visibility: visible;
+            transform: scale(1);
+        }
         .modal__content {
             padding: 20px;
             border-radius: 20px;
@@ -74,7 +77,7 @@
             position: relative;
             pointer-events: all;
             height: 550px;
-            box-shadow:0px 0px 30px rgba(235, 235, 235, 0.7);
+            box-shadow: 0px 0px 30px rgba(235, 235, 235, 0.7);
             border: 1px solid $background-color;
             background: url(../../Assets/Images/fond-bleu-degrade-luxe-abstrait-bleu-fonce-lisse-banniere-studio-vignette-noire.webp);
             background-size: cover;
@@ -83,20 +86,19 @@
             opacity: 1;
             z-index: 1005;
             overflow-y: hidden;
-            @media screen and (max-width:1199px){
+            @media screen and (max-width: 1199px) {
                 width: 90%;
                 max-height: 90%;
                 overflow-y: auto;
-                box-shadow: 0px 0px 20px rgba(235, 235, 235, 0.6)
-
+                box-shadow: 0px 0px 20px rgba(235, 235, 235, 0.6);
             }
-            @media screen and (max-width:768px){
-                box-shadow: 0px 0px 14px rgba(235, 235, 235, 0.5)
+            @media screen and (max-width: 768px) {
+                box-shadow: 0px 0px 14px rgba(235, 235, 235, 0.5);
             }
             &--header {
                 width: 100%;
                 overflow: hidden;
-                @media screen and (max-width: 1199px){
+                @media screen and (max-width: 1199px) {
                     height: auto;
                 }
                 & h2 {
@@ -104,18 +106,18 @@
                     font-weight: 500;
                     color: white;
                     overflow: hidden;
-                    margin:0;    
-                    padding:0;
+                    margin: 0;
+                    padding: 0;
                     text-align: center;
-                    @media screen and (max-width:1199px){
+                    @media screen and (max-width: 1199px) {
                         height: auto;
                     }
-                    @media screen and (max-width:768px){
+                    @media screen and (max-width: 768px) {
                         font-size: 1.8rem;
                         margin-top: 15px;
                     }
                 }
-                & button{
+                & button {
                     color: white;
                     opacity: 0.9;
                     font-size: 2rem;
@@ -128,48 +130,50 @@
                     right: 7px;
                 }
             }
-            &--body{
+            &--body {
                 width: 100%;
                 margin-top: 0px;
                 height: 480px;
                 overflow: hidden;
-                @media screen and (max-width:1199px){
+                @media screen and (max-width: 1199px) {
                     height: auto;
                     padding: 20px 20px;
                 }
-                @media screen and (max-width: 768px){
+                @media screen and (max-width: 768px) {
                     padding: 20px 5px;
                 }
-                .projects-container{
+                .projects-container {
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    overflow:hidden;
-                    @media screen and (max-width:1199px){
+                    overflow: hidden;
+                    @media screen and (max-width: 1199px) {
                         flex-direction: column-reverse;
                         justify-content: center;
                         gap: 30px;
                         min-height: auto;
                     }
-                    &__mobile{
+                    &__mobile {
                         height: 100%;
                         width: 50%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         visibility: visible;
-                        @media screen and (max-width:1199px){
+                        @media screen and (max-width: 1199px) {
                             display: none;
                         }
-                        &--mockup{
+                        &--mockup {
                             width: 500px;
                             height: auto;
                             object-fit: cover;
                             position: relative;
                             animation: appear 500ms ease-in-out;
-                            filter: drop-shadow(0px 0px 7px rgba(235, 235, 235, 0.6))
+                            filter: drop-shadow(
+                                0px 0px 7px rgba(235, 235, 235, 0.6)
+                            );
                         }
-                        & iframe{
+                        & iframe {
                             position: absolute;
                             top: 173px;
                             left: 83px;
@@ -181,7 +185,7 @@
                         }
                     }
 
-                    &__text{
+                    &__text {
                         width: 50%;
                         height: 100%;
                         padding: 20px;
@@ -191,72 +195,75 @@
                         justify-content: center;
                         gap: 12px;
                         text-align: start;
-                        background: rgb(2,0,36);
-                        background: linear-gradient(transparent 0%, rgba(2, 2, 22, 1) 100%);
+                        background: rgb(2, 0, 36);
+                        background: linear-gradient(
+                            transparent 0%,
+                            rgba(2, 2, 22, 1) 100%
+                        );
                         border-radius: 20px;
                         position: relative;
-                        @media screen and (max-width: 1199px){
+                        @media screen and (max-width: 1199px) {
                             display: block;
                             width: 100%;
                             padding: 10px 0px;
                         }
-                        @media screen and (max-width:768px){
+                        @media screen and (max-width: 768px) {
                             padding: 5px 0px;
                             align-items: center;
-                            border-left: 1px solid rgba(235,235,235,0.2);
-                            border-bottom: 1px solid rgba(235,235,235,0.2);
+                            border-left: 1px solid rgba(235, 235, 235, 0.2);
+                            border-bottom: 1px solid rgba(235, 235, 235, 0.2);
                             border-top: none;
                             border-radius: 0px 0px 20px 20px;
                         }
-                        section{
-                            @media screen and (max-width:1199px){
+                        section {
+                            @media screen and (max-width: 1199px) {
                                 margin-bottom: 10px;
-                            @media screen and (max-width:768px){
-                                margin-bottom: 50px;
+                                @media screen and (max-width: 768px) {
+                                    margin-bottom: 50px;
+                                }
                             }
                         }
-                        }
-                        & h3{
+                        & h3 {
                             margin-bottom: 5px;
                             font-size: 1.5rem;
                             color: white;
                             text-align: justify;
-                            @media screen and (max-width:1199px){
+                            @media screen and (max-width: 1199px) {
                                 padding: 0px 20px;
                             }
-                            @media screen and (max-width: 768px){
+                            @media screen and (max-width: 768px) {
                                 text-align: center;
                                 margin-bottom: 10px;
                             }
                         }
-                        & p{
+                        & p {
                             margin-bottom: 3px;
                             color: white;
                             font-size: 1.3rem;
                             text-align: justify;
-                            @media screen and (max-width:1199px){
+                            @media screen and (max-width: 1199px) {
                                 padding: 0px 20px;
                             }
-                            @media screen and (max-width: 768px){
+                            @media screen and (max-width: 768px) {
                                 text-align: center;
                                 margin-left: 15px;
                                 margin-bottom: 5px;
                             }
-                        }                        
-                        & ul li{
-                                color: white;
-                                font-size: 1.3rem;
-                                text-align: justify;
-                                margin-left: 15px;
-                            @media screen and (max-width:1199px){
+                        }
+                        & ul li {
+                            color: white;
+                            font-size: 1.3rem;
+                            text-align: justify;
+                            margin-left: 15px;
+                            @media screen and (max-width: 1199px) {
                                 padding: 0px 20px;
                             }
-                            @media screen and (max-width:768px) {
+                            @media screen and (max-width: 768px) {
                                 text-align: start;
                             }
                         }
                     }
-                    &__links{
+                    &__links {
                         display: flex;
                         flex-direction: row-reverse;
                         align-items: center;
@@ -265,34 +272,33 @@
                         bottom: 50px;
                         left: 0;
                         width: 50%;
-                        height: 70px;                        
-                        @media screen and (max-width: 1199px){
+                        height: 70px;
+                        @media screen and (max-width: 1199px) {
                             width: 100%;
                             height: auto;
                             position: relative;
                             bottom: 0;
                         }
-                        @media screen and (max-width:768px){
+                        @media screen and (max-width: 768px) {
                             padding: 10px;
                             flex-direction: column;
                             gap: 20px;
                             height: 250px;
                         }
-                        & a{
+                        & a {
                             color: white;
                             font-size: 1.9rem;
                             text-decoration: none;
                             font-weight: 500;
-                            &:hover{
+                            &:hover {
                                 opacity: 0.8;
-
                             }
                             @media screen and (max-width: 768px) {
                                 font-size: 1.4rem;
                             }
                         }
-                        &--website a{ 
-                            @media screen and (max-width:768px){
+                        &--website a {
+                            @media screen and (max-width: 768px) {
                                 display: block;
                                 border: 1px solid white;
                                 padding: 10px 15px;
@@ -301,10 +307,9 @@
                                 overflow: hidden;
                                 text-align: center;
                                 border-radius: 20px;
-                                animation: colorPulse 7500ms infinite ease ;
+                                animation: colorPulse 7500ms infinite ease;
                             }
                         }
-
                     }
                 }
             }
@@ -312,144 +317,141 @@
     }
     .modal__content {
         &::before {
-          content: "";
-          @media screen and (max-width:1199px){
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-position: left;
-            background-repeat: no-repeat;
-            opacity: 0;
-            z-index: -1;
-            animation: appearBg 1000ms ease-in-out forwards;
-            }
-        }
-      }
-      
-      &.modal-0 {
-        .modal__content {
-          &::before {
-            @media screen and (max-width:1199px){
-            background: url("../../Assets/Modals/kasa.png");
-            background-position: left;
-            background-size: cover;
-            }
-          }
-        }
-      }
-      
-      &.modal-1 {
-        .modal__content {
-          &::before {
-            @media screen and (max-width:1199px){
-                background: url("../../Assets/Modals/SophieBluel.webp");
-                background-position: top;
-                background-size: cover;
-            }
-            @media screen and (max-width:768px){
-                background-size: normal;
-            }
-          }
-        }
-      }
-      
-      &.modal-2 {
-        .modal__content {
-          &::before {
-            @media screen and (max-width:1199px){
-                background: url("../../Assets/Modals/VieuxGrimoire.webp");
+            content: "";
+            @media screen and (max-width: 1199px) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
                 background-position: left;
+                background-repeat: no-repeat;
+                opacity: 0;
+                z-index: -1;
+                animation: appearBg 1000ms ease-in-out forwards;
             }
-            @media screen and (max-width: 768px){
-                background-size: cover;
-            }
-          }
         }
-      }
-      
-      &.modal-3 {
+    }
+
+    &.modal-0 {
         .modal__content {
-          &::before {
-            @media screen and (max-width:1199px){
-            background: url("../../Assets/Modals/Booki.webp");
-            background-position: left;
-            background-size: cover;
+            &::before {
+                @media screen and (max-width: 1199px) {
+                    background: url("../../Assets/Modals/kasa.png");
+                    background-position: left;
+                    background-size: cover;
+                }
             }
-          }
-          &--body{
-            @media screen and (max-width:1199px){
-                margin-top: 60px;
-            }
-            @media screen and (max-width:768px){
-                margin-top:0px;
-            }
-          }
         }
-      }
-      
-      &.modal-4 {
+    }
+
+    &.modal-1 {
         .modal__content {
-          &::before {
-            @media screen and (max-width:1199px){
-                background: url("../../Assets/Modals/NinaCarducci.webp");
-                background-position: top left;
+            &::before {
+                @media screen and (max-width: 1199px) {
+                    background: url("../../Assets/Modals/SophieBluel.webp");
+                    background-position: top;
+                    background-size: cover;
+                }
+                @media screen and (max-width: 768px) {
+                    background-size: normal;
+                }
             }
-            @media screen and (max-width:768px){
-                background-size: cover;
-                background-position: left;
+        }
+    }
+
+    &.modal-2 {
+        .modal__content {
+            &::before {
+                @media screen and (max-width: 1199px) {
+                    background: url("../../Assets/Modals/VieuxGrimoire.webp");
+                    background-position: left;
+                }
+                @media screen and (max-width: 768px) {
+                    background-size: cover;
+                }
             }
-          }
-          &--body{
-            @media screen and (max-width:1199px){
-                margin-top: 60px;
+        }
+    }
+
+    &.modal-3 {
+        .modal__content {
+            &::before {
+                @media screen and (max-width: 1199px) {
+                    background: url("../../Assets/Modals/Booki.webp");
+                    background-position: left;
+                    background-size: cover;
+                }
             }
-            @media screen and (max-width:768px){
-                margin-top:0px;
+            &--body {
+                @media screen and (max-width: 1199px) {
+                    margin-top: 60px;
+                }
+                @media screen and (max-width: 768px) {
+                    margin-top: 0px;
+                }
             }
-            & .projects-container{
-                &__links{
-                    &--website a{ 
-                        @media screen and (max-width:768px){
-                            display: inline;
-                            border: none;
-                            padding: 0px;
-                            width: 200px;
-                            white-space: no-wrap;
-                            overflow: hidden;
-                            text-align: center;
-                            border-radius: none;
-                            animation: none;
+        }
+    }
+
+    &.modal-4 {
+        .modal__content {
+            &::before {
+                @media screen and (max-width: 1199px) {
+                    background: url("../../Assets/Modals/NinaCarducci.webp");
+                    background-position: top left;
+                }
+                @media screen and (max-width: 768px) {
+                    background-size: cover;
+                    background-position: left;
+                }
+            }
+            &--body {
+                @media screen and (max-width: 1199px) {
+                    margin-top: 60px;
+                }
+                @media screen and (max-width: 768px) {
+                    margin-top: 0px;
+                }
+                & .projects-container {
+                    &__links {
+                        &--website a {
+                            @media screen and (max-width: 768px) {
+                                display: inline;
+                                border: none;
+                                padding: 0px;
+                                width: 200px;
+                                white-space: no-wrap;
+                                overflow: hidden;
+                                text-align: center;
+                                border-radius: none;
+                                animation: none;
+                            }
                         }
-                    }
-                    &--pdf a{
-                        @media screen and (max-width:768px){
-                            display: block;
-                            border: 1px solid white;
-                            padding: 10px 15px;
-                            width: 200px;
-                            white-space: no-wrap;
-                            overflow: hidden;
-                            text-align: center;
-                            border-radius: 20px;
-                            animation: colorPulse 2500ms infinite ease ;
+                        &--pdf a {
+                            @media screen and (max-width: 768px) {
+                                display: block;
+                                border: 1px solid white;
+                                padding: 10px 15px;
+                                width: 200px;
+                                white-space: no-wrap;
+                                overflow: hidden;
+                                text-align: center;
+                                border-radius: 20px;
+                                animation: colorPulse 2500ms infinite ease;
+                            }
                         }
                     }
                 }
             }
-        }
-        & #ninaImg{
-            animation: appear 500ms ease-in-out;
-            width: 450px;
-            height: auto;
-            object-fit: cover;
-            margin-bottom: 40px;
-            filter: drop-shadow(0px 0px 7px rgba(235, 235, 235, 0.6))
+            & #ninaImg {
+                animation: appear 500ms ease-in-out;
+                width: 450px;
+                height: auto;
+                object-fit: cover;
+                margin-bottom: 40px;
+                filter: drop-shadow(0px 0px 7px rgba(235, 235, 235, 0.6));
             }
         }
-    }    
-    
+    }
 }
-
-
