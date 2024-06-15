@@ -14,6 +14,7 @@ function Contact () {
     const [recaptchaValid, setRecaptchaValid] = useState(false);
     const [isSending, setIsSending] = useState(false);
 
+    // Function to set recaptchaValid to true when the user has completed the recaptcha
     const onRecaptchaChange = (value) => {
         if (value) {
             setRecaptchaValid(true);
@@ -21,20 +22,22 @@ function Contact () {
     }
 
     const [emailResult, setEmailResult] = useState(null);
-
+    // Function to send the email
     const sendEmail = (e) => {
         e.preventDefault();
         setIsSending(true);
-
+        // Send the email using env variables
         emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE , e.target, process.env.REACT_APP_EMAILJS_SERVICE_KEY)
         .then((result) => {
             console.log(result.text);
+            // inform the user that the email has been sent
             setEmailResult(result.text);
             setIsSending(false);
             e.target.reset();
+            // Reset the send button
             setTimeout(()=>{
                 setEmailResult(null);
-            
+            // Reset the send button after a delay
             },(2700));
             
         }, (error) => {
@@ -47,14 +50,17 @@ function Contact () {
         const observerPhone = new IntersectionObserver(entries => {
             const phoneBtn = document.querySelector('.phone-btn');
             const span = phoneBtn.querySelector('a span');
+            // entries are the elements that are observed, in this case, the image of the phone containing the span
             if (entries[0].isIntersecting) {
                 if (phoneBtn) {
                     if (span) {
+                        // If the image is in the viewport, move the span into the container
                         span.style.transform = 'translateY(0px)';
                         span.style.opacity = '1';
                     }
                 }
             } else {
+                // If the image is not in the viewport, move the span out of the container
                 span.style.transform = 'translateY(-100px)';
                 span.style.opacity = '0';
             }
@@ -62,10 +68,12 @@ function Contact () {
     
         const callMe = document.querySelector('.contact__content--links-image');
         if (callMe) {
+            // Observe the phone image
             observerPhone.observe(callMe);
         }
         return () => {
             if (callMe) {
+                // Stop observing the phone image
                 observerPhone.unobserve(callMe);
             }
         };

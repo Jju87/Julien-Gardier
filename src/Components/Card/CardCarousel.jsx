@@ -14,7 +14,7 @@ function CardCarousel({ filter }) {
     const [selectedProjectId, setSelectedProjectId] = useState(null);
     const [key, setKey] = useState(Math.random())
 
-
+    // Filter projects by group
     const isGroupVisible = (filter, index) => {
         if (filter === 'Tout') return true;
         if (filter === 'Frontend' && (index === 0 || index === 3)) return true;
@@ -24,31 +24,38 @@ function CardCarousel({ filter }) {
     };
 
     useEffect(() => {
+        // Update visible groups based on filter (a new array)
         const updatedVisibleGroups = [];
         for (let i = 0; i < totalGroups; i++) {
             if (isGroupVisible(filter, i)) {
                 updatedVisibleGroups.push(i);
             }
         }
-        setVisibleGroups(updatedVisibleGroups);
+        setVisibleGroups(updatedVisibleGroups); // Update visibleGroups state with new array
         setCurrentIndex(0); // Reset currentIndex when filter changes
     }, [filter]);
 
     const handleLeftClick = () => {
+        
         setCurrentIndex(oldIndex => oldIndex === 0 ? visibleGroups.length - 1 : oldIndex - 1);
+        // if oldIndex === 0, set currentIndex to the last index of visibleGroups array , if not, set currentIndex to oldIndex - 1
     };
 
     const handleRightClick = () => {
         setCurrentIndex(oldIndex => oldIndex === visibleGroups.length - 1 ? 0 : oldIndex + 1);
+        // if oldIndex === last index of visibleGroups array, set currentIndex to 0, if not, set currentIndex to oldIndex + 1
     };
 
     const handleCardGroupClick = (index) => {
+        // Find the project content based on the index of the clicked card group, source is projectsContent.jsx
         const projectContent = projectsContent.find(project => project.id === index);
+        // console.log(`opening ${projectContent.title} modal`);
         setModalContent(projectContent.content);
         setSelectedProjectId(projectContent.id);
         setIsModalOpen(true);
+        // setKey with a random number in order to reset modal css behavior
         setKey(Math.random());
-        console.log(`Card group ${index} clicked. Modal open status: ${isModalOpen}`);
+        // console.log(`Card group ${index} clicked. Modal open status: ${isModalOpen}`);
     };
 
     return (
