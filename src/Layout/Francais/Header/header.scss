@@ -165,13 +165,10 @@ header {
             }
             li {
                 font-size: 1.8rem;
-                width: 90px;
-                text-align: center;
+                width: auto;
                 white-space: no-wrap;
                 @media screen and (max-width: 1199px) {
                     font-size: 1.6rem;
-                    width: 76px;
-                    text-align: center;
                 }
             }
             li:hover {
@@ -182,9 +179,6 @@ header {
                 height: 20px;
                 display: flex;
                 margin-left: auto;
-                @media screen {
-                    margin: auto;
-                }
             }
         }
     }

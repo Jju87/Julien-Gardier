@@ -71,7 +71,7 @@ function HeaderEng({ children }) {
                         <a href="#accueil">Home</a>
                     </li>
                     <li>
-                        <a href="#a-propos">About</a>
+                        <a href="#a-propos">About me</a>
                     </li>
                     <li>
                         <a href="#portfolio">Portfolio</a>

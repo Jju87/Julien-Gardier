@@ -60,9 +60,10 @@
         z-index: 1000;
         pointer-events: none;
         background-color: rgba(34, 33, 33, 0.85);
-        transition: 100ms ease-in-out;
+        transition: 150ms ease-in-out;
         visibility: hidden;
         transform: scale(0);
+        opacity: 0;
         &.open {
             opacity: 1;
             pointer-events: all;
@@ -136,11 +137,11 @@
                 height: 480px;
                 overflow: hidden;
                 @media screen and (max-width: 1199px) {
-                    height: auto;
                     padding: 20px 20px;
                 }
                 @media screen and (max-width: 768px) {
                     padding: 20px 5px;
+                    height: auto;
                 }
                 .projects-container {
                     width: 100%;
@@ -151,7 +152,7 @@
                         flex-direction: column-reverse;
                         justify-content: center;
                         gap: 30px;
-                        min-height: auto;
+                        height: auto;
                     }
                     &__mobile {
                         height: 100%;
