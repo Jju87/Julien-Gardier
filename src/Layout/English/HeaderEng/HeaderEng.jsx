@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import "./header.scss";
+import "../../Francais/Header/header.scss";
 import logoHeader from "../../../Assets/Images/logo.PNG";
 import React, { useState, useEffect } from "react";
-import englishFlag from "../../../Assets/Images/eng-flag.png";
+import frenchFlag from "../../../Assets/Images/fr-flag.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
-function Header({ children }) {
+function HeaderEng({ children }) {
     const [isFixed, setIsFixed] = useState(false);
     const [ulIsOpen, setUlIsOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -68,10 +68,10 @@ function Header({ children }) {
                     }
                 >
                     <li>
-                        <a href="#accueil">Accueil</a>
+                        <a href="#accueil">Home</a>
                     </li>
                     <li>
-                        <a href="#a-propos">A propos</a>
+                        <a href="#a-propos">About</a>
                     </li>
                     <li>
                         <a href="#portfolio">Portfolio</a>
@@ -80,11 +80,11 @@ function Header({ children }) {
                         <a href="#contact">Contact</a>
                     </li>
                     <li>
-                        <Link to="/eng/">
+                        <Link to="/">
                             <img
-                                src={englishFlag}
-                                alt="Flag of the United Kingdom"
-                                title="Swith to English language"
+                                src={frenchFlag}
+                                alt="Drapeau Français"
+                                title="Passer en langue Française"
                             />
                         </Link>
                     </li>
@@ -103,10 +103,10 @@ function Header({ children }) {
                     />
                 )}
             </nav>
-            {/* passing header content as a 'children' prop */}
+            {/* passing headerContentEng as a 'children' prop in HomePage component */}
             {children}
         </header>
     );
 }
 
-export default Header;
+export default HeaderEng;

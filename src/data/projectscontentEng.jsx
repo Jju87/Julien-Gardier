@@ -1,4 +1,4 @@
-import phoneMockup from "../Assets/Images/phone-mockup.png";
+import pcMockup from "../Assets/Images/phone-mockup.png";
 import NinaCarducci from "../Assets/Modals/NinaCarducci.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,42 +11,43 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faGoogleDrive } from "@fortawesome/free-brands-svg-icons";
 
-const projectsContent = [
+const projectsContentEng = [
     {
         id: 0,
-        title: "Kasa, une application web de location immobilière crée avec React",
+        title: "Kasa, a real-estate rental web application. Created with React",
         content: (
             <>
                 <article className="projects-container">
                     <div className="projects-container__mobile">
                         <img
                             className="projects-container__mobile--mockup"
-                            src={phoneMockup}
-                            alt="contour d'un téléphone"
+                            src={pcMockup}
+                            alt="outline of a pc"
                         />
                         <iframe
                             src="https://kasa-rose.vercel.app/"
-                            title="Kasa, application web développée par Julien Gardier"
+                            title="Kasa, web application developed by Julien Gardier"
                         ></iframe>
                     </div>
                     <div className="projects-container__text">
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faBookOpen} /> Scénario
+                                <FontAwesomeIcon icon={faBookOpen} /> Project
                             </h3>
                             <p>
-                                Kasa, codé il y a plus de 10 ans en ASP.NET avec
-                                un code legacy important, est en refonte totale
-                                vers une stack JavaScript. Je suis chargé
-                                d'implémenter le front-end avec React.
+                                Kasa, coded over 10 years ago in ASP.NET with
+                                significant legacy code, is being completely
+                                overhauled to a JavaScript stack. I am
+                                responsible for implementing the front-end with
+                                React.
                             </p>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faCode} /> Compétences
-                                requises
+                                <FontAwesomeIcon icon={faCode} /> Required
+                                Skills
                             </h3>
                             <ul>
                                 <li>
@@ -56,45 +57,45 @@ const projectsContent = [
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} /> Gestion
-                                    de packages avec yarn ou npm
+                                    <FontAwesomeIcon icon={faMinus} /> Package
+                                    management with yarn or npm
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Utilisation de Figma
+                                    <FontAwesomeIcon icon={faMinus} /> Using
+                                    Figma devmode
                                 </li>
                             </ul>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faPersonHiking} /> Défis
-                                relevés sur ce projet
+                                <FontAwesomeIcon icon={faPersonHiking} />{" "}
+                                Challenges I faced 
                             </h3>
                             <ul>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} /> La
-                                    création du carrousel d'images codé sans
-                                    bibliothèques externes.
+                                    <FontAwesomeIcon icon={faMinus} /> Creating
+                                    the image carousel without any external
+                                    libraries.
                                 </li>
                                 <li>
                                     {" "}
                                     <FontAwesomeIcon icon={faMinus} />{" "}
-                                    L'intégration des animations de "collapse".{" "}
+                                    Integration of the "collapse" animations.
                                 </li>
                             </ul>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faRocket} /> Initiatives
-                                supplémentaires
+                                <FontAwesomeIcon icon={faRocket} /> More
+                                initiatives
                             </h3>
                             <p>
-                                J'ai ajouté un défilement automatique avec
-                                transitions au carrousel d'images.
+                                I added auto-scrolling and transitions to the
+                                image carousel.
                             </p>{" "}
                         </section>
                     </div>
@@ -105,8 +106,8 @@ const projectsContent = [
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faEye} /> Voir le site en
-                                ligne
+                                <FontAwesomeIcon icon={faEye} /> View the
+                                website
                             </a>
                         </div>
                         <div className="projects-container__links--github">
@@ -115,7 +116,8 @@ const projectsContent = [
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faGithub} /> Voir le code
+                                <FontAwesomeIcon icon={faGithub} /> View the
+                                code
                             </a>
                         </div>
                     </div>
@@ -125,98 +127,95 @@ const projectsContent = [
     },
     {
         id: 1,
-        title: "Sophie Bluel, une page web dynamique crée en Vanilla JavaScript",
+        title: "Sophie Bluel, a dynamic web page created with JavaScript (vanilla)",
         content: (
             <>
                 <article className="projects-container">
                     <div className="projects-container__mobile">
                         <img
                             className="projects-container__mobile--mockup"
-                            src={phoneMockup}
-                            alt="contour d'un téléphone"
+                            src={pcMockup}
+                            alt="outline of a pc"
                         />
                         <iframe
                             src="https://sophie-bluel-architecte-iota.vercel.app/"
-                            title="Sophie Bluel, application web développée par Julien Gardier"
+                            title="Sophie Bluel, web application developed by Julien Gardier"
                         ></iframe>
                     </div>
                     <div className="projects-container__text">
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faBookOpen} /> Scénario
+                                <FontAwesomeIcon icon={faBookOpen} /> Project
                             </h3>
                             <p>
-                                Développer le portfolio de l'architecte Sophie
-                                Bluel. Une fois connectée, elle pourra uploader
-                                ou supprimer des médias.
+                                Once logged in, the architect Sophie Bluel will be able to upload or
+                                delete media on her portfolio website.
                             </p>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faCode} /> Compétences
-                                requises
+                                <FontAwesomeIcon icon={faCode} /> Required
+                                Skills
                             </h3>
                             <ul>
                                 <li>
                                     {" "}
                                     <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Manipulation des éléments du DOM avec
-                                    JavaScript
+                                    Manipulating DOM elements with JavaScript
                                 </li>
                                 <li>
                                     {" "}
                                     <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Communication avec une API (utilisation de
+                                    Communicating with an API (using
                                     Swagger/Postman)
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Récupération des données utilisateur via des
-                                    formulaires
+                                    <FontAwesomeIcon icon={faMinus} /> Gathering
+                                    user data (images, text) through forms
                                 </li>
                             </ul>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faPersonHiking} /> Défis
-                                relevés sur ce projet
+                                <FontAwesomeIcon icon={faPersonHiking} />{" "}
+                                Challenges I faced 
                             </h3>
                             <ul>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} /> Mise à
-                                    jour dynamique des données pour éviter le
-                                    rechargement de la page par l'utilisateur
+                                    <FontAwesomeIcon icon={faMinus} />{" "}
+                                    Dynamically updating data to avoid page
+                                    reloads for the user
                                 </li>
                             </ul>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faRocket} /> Initiatives
-                                supplémentaires
+                                <FontAwesomeIcon icon={faRocket} /> More
+                                initiatives
                             </h3>
                             <p>
-                                J'ai entièrement reconstruit le back-end de ce
-                                projet pour permettre son déploiement en ligne.
-                                J'ai utilisé Express et MongoDB, en respectant
-                                la logique du front-end.
+                                I completely rebuilt the back-end of this
+                                project to allow online deployment. I used
+                                Express and MongoDB, following the front-end
+                                logic.
                             </p>
                             <p>
-                                Les images, auparavant stockées localement, sont
-                                maintenant hébergées sur un CDN.
+                                Images, previously stored locally, are now
+                                hosted on a CDN.
                             </p>
                             <p>
-                                J'ai aussi ajouté un middleware pour modérer les
-                                images postées.
+                                I also added a middleware to moderate posted
+                                images.
                             </p>
                             <p>
-                                Essayez de vous connecter avec le compte démo
-                                pour ajouter ou supprimer une photo !
+                                Try logging in with the demo account to add or
+                                delete a photo!
                             </p>{" "}
                         </section>
                     </div>
@@ -227,8 +226,8 @@ const projectsContent = [
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faEye} /> Voir le site en
-                                ligne{" "}
+                                <FontAwesomeIcon icon={faEye} /> View the
+                                website{" "}
                             </a>
                         </div>
                         <div className="projects-container__links--github">
@@ -237,7 +236,8 @@ const projectsContent = [
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faGithub} /> Voir le code
+                                <FontAwesomeIcon icon={faGithub} /> View the
+                                code
                             </a>
                         </div>
                     </div>
@@ -247,37 +247,36 @@ const projectsContent = [
     },
     {
         id: 2,
-        title: "Développement du back-end avec Express & MongoDB",
+        title: "Back-end development of a book-rating site using MERN stack",
         content: (
             <>
                 <article className="projects-container">
                     <div className="projects-container__mobile">
-                        < img
+                        <img
                             className="projects-container__mobile--mockup"
-                            src={phoneMockup}
-                            alt="contour d'un téléphone"
+                            src={pcMockup}
+                            alt="outline of a pc"
                         />
                         <iframe
                             src="https://vieux-grimoire.vercel.app/"
-                            title="Au vieux grimoire, application web développée par Julien Gardier"
+                            title="Au vieux grimoire, web application developed by Julien Gardier"
                         ></iframe>
                     </div>
                     <div className="projects-container__text">
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faBookOpen} /> Scénario
+                                <FontAwesomeIcon icon={faBookOpen} /> Scenario
                             </h3>
                             <p>
-                                Permettre aux utilisateurs de créer, noter et
-                                consulter des livres.
+                                Allow users to create, rate, and review books.
                             </p>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faCode} /> Compétences
-                                requises
+                                <FontAwesomeIcon icon={faCode} /> Required
+                                Skills
                             </h3>
                             <ul>
                                 <li>
@@ -292,54 +291,47 @@ const projectsContent = [
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} /> Respect
-                                    des exigences de l'API
+                                    <FontAwesomeIcon icon={faMinus} /> Meeting
+                                    API requirements
                                 </li>
                             </ul>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faPersonHiking} /> Défis
-                                relevés sur ce projet
+                                <FontAwesomeIcon icon={faPersonHiking} />{" "}
+                                Challenges faced in this project
                             </h3>
                             <ul>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} /> Création
-                                    d'une route qui envoie un array (tableau)
-                                    des trois meilleurs notes
+                                    <FontAwesomeIcon icon={faMinus} /> Creating
+                                    a route that sends an array of the top three
+                                    ratings
                                 </li>
                             </ul>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faRocket} /> Initiatives
-                                supplémentaires
+                                <FontAwesomeIcon icon={faRocket} /> Additional
+                                Initiatives
                             </h3>
                             <p>
-                                J'ai migré le stockage des images à un CDN pour
-                                améliorer les performances et pouvoir déployer
-                                en ligne.
+                                I migrated image storage to a CDN to improve
+                                performance and enable online deployment.
                             </p>
                             <p>
-                                J'ai intégré une logique de modération de
-                                contenu pour filtrer les images. Le middleware
-                                de modération envoie l'image à une API, qui
-                                permet à une IA d'analyser l'image. Mon code
-                                valide ensuite l'image en fonction de l'analyse.
+                                I integrated a content moderation logic to
+                                filter images. The moderation middleware sends
+                                the image to an API, allowing an AI to analyze
+                                the image. My code then validates the image
+                                based on the analysis.
                             </p>
                             <p>
-                                J'ai également modifié le modèle pour permettre
-                                aux utilisateurs d'ajouter des avis dans une
-                                nouvelle section "À propos de ce livre".
-                            </p>
-                            <p>
-                                N'hésitez pas à ajouter ou supprimer un livre !
-                                Un compte démo et des inputs préremplis sont
-                                disponibles pour faciliter l'expérience.
-                            </p>
+                                I also modified the model to allow users to rate
+                                books (1-5) and write a text review.
+                            </p>{" "}
                         </section>
                     </div>
                     <div className="projects-container__links">
@@ -349,17 +341,18 @@ const projectsContent = [
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faEye} /> Voir le site en
-                                ligne
+                                <FontAwesomeIcon icon={faEye} /> View the
+                                website{" "}
                             </a>
                         </div>
                         <div className="projects-container__links--github">
                             <a
-                                href="https://github.com/Jju87/Vieux-Grimoire"
+                                href="https://github.com/Jju87/P7_Vieux_Grimoire"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faGithub} /> Voir le code
+                                <FontAwesomeIcon icon={faGithub} /> View the
+                                code
                             </a>
                         </div>
                     </div>
@@ -369,38 +362,35 @@ const projectsContent = [
     },
     {
         id: 3,
-        title: "Booki, intégration de la page d'accueil d'un site de type Airbnb avec HTML & CSS",
+        title: "Booki, homepage for a travel agency with HTML & CSS",
         content: (
             <>
                 <article className="projects-container">
                     <div className="projects-container__mobile">
                         <img
                             className="projects-container__mobile--mockup"
-                            src={phoneMockup}
-                            alt="contour d'un téléphone"
+                            src={pcMockup}
+                            alt="phone outline"
                         />
                         <iframe
                             src="https://jju87.github.io/booki-openclassrooms/"
-                            title="Booki, développé par Julien Gardier"
+                            title="Booki, developed by Julien Gardier"
                         ></iframe>
                     </div>
                     <div className="projects-container__text">
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faBookOpen} /> Scénario
+                                <FontAwesomeIcon icon={faBookOpen} /> Project
                             </h3>
                             <p>
-                                Intégration de la page d'acceuil de Booki, site
-                                de type "Airbnb". Premier projet de ma formation
-                                "développeur web" avec OpenClassrooms.
+                                Integration of Booki's homepage, a site similar to "Airbnb". First project of my "web developer" training with OpenClassrooms.
                             </p>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faCode} /> Compétences
-                                requises
+                                <FontAwesomeIcon icon={faCode} /> Required Skills
                             </h3>
                             <ul>
                                 <li>
@@ -409,32 +399,27 @@ const projectsContent = [
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Intégration d'une maquette Figma
+                                    <FontAwesomeIcon icon={faMinus} /> Integration of a Figma mockup
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Utilisation de Github
+                                    <FontAwesomeIcon icon={faMinus} /> Use of Github
                                 </li>
                             </ul>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faPersonHiking} /> Défis
-                                relevés sur ce projet
+                                <FontAwesomeIcon icon={faPersonHiking} /> Challenges I faced
                             </h3>
                             <ul>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Intégration des maquettes en responsive
+                                    <FontAwesomeIcon icon={faMinus} /> Integration of responsive mockups
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Modification d'un code CSS préexistant
+                                    <FontAwesomeIcon icon={faMinus} /> Modification of pre-existing CSS code
                                 </li>
                             </ul>
                         </section>
@@ -446,8 +431,7 @@ const projectsContent = [
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faEye} /> Voir le site en
-                                ligne{" "}
+                                <FontAwesomeIcon icon={faEye} /> View the site online{" "}
                             </a>
                         </div>
                         <div className="projects-container__links--github">
@@ -456,7 +440,7 @@ const projectsContent = [
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faGithub} /> Voir le code
+                                <FontAwesomeIcon icon={faGithub} /> View the code
                             </a>
                         </div>
                     </div>
@@ -466,7 +450,7 @@ const projectsContent = [
     },
     {
         id: 4,
-        title: "Débuggage et optimisation du site d'une photographe avec Lighthouse",
+        title: "Debugging and optimizing a photographer's website with Lighthouse",
         content: (
             <>
                 <article className="projects-container">
@@ -474,71 +458,56 @@ const projectsContent = [
                         <img
                             id="ninaImg"
                             src={NinaCarducci}
-                            alt="Nina Carducci, développé par Julien Gardier"
+                            alt="Nina Carducci, developed by Julien Gardier"
                         />
                     </div>
                     <div className="projects-container__text">
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faBookOpen} /> Scénario
+                                <FontAwesomeIcon icon={faBookOpen} /> Project
                             </h3>
                             <p>
-                                Optimisation SEO pour le site de Nina Carducci,
-                                une photographe, selon ses demandes indiquées
-                                dans son mail. Un rapport détaillé de
-                                l'intervention est fourni.
+                                SEO optimization for Nina Carducci's website, a photographer, following her requests. A very detailed report of the intervention is provided.
                             </p>{" "}
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faCode} /> Compétences
-                                requises
+                                <FontAwesomeIcon icon={faCode} /> Required Skills
                             </h3>
                             <ul>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Optimisation des performances (compression
-                                    d'images, minification, CDN)
+                                    <FontAwesomeIcon icon={faMinus} /> Performance optimization (image compression, minification, CDN)
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} /> SEO
-                                    (référencement et mots-clefs)
+                                    <FontAwesomeIcon icon={faMinus} /> SEO (keywords and optimization)
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Intégration des balises Meta pour les
-                                    réseaux sociaux
+                                    <FontAwesomeIcon icon={faMinus} /> Integration of Meta tags for social media
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Amélioration de l'accessibilité (Wave, ARIA,
-                                    sémantique HTML)
+                                    <FontAwesomeIcon icon={faMinus} /> Accessibility improvement (Wave, ARIA, HTML semantics)
                                 </li>
                             </ul>
                         </section>
                         <section>
                             <h3>
                                 {" "}
-                                <FontAwesomeIcon icon={faPersonHiking} /> Défis
-                                relevés sur ce projet
+                                <FontAwesomeIcon icon={faPersonHiking} /> Challenges I faced
                             </h3>
                             <ul>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} />{" "}
-                                    Production d'un rapport d'intervention
-                                    détaillé
+                                    <FontAwesomeIcon icon={faMinus} /> Production of a detailed intervention report
                                 </li>
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon icon={faMinus} /> Débuggage
-                                    du carrousel d'images
+                                    <FontAwesomeIcon icon={faMinus} /> Debugging the image carousel
                                 </li>
                             </ul>
                         </section>
@@ -550,8 +519,7 @@ const projectsContent = [
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faEye} /> Voir le site en
-                                ligne{" "}
+                                <FontAwesomeIcon icon={faEye} /> View the site online{" "}
                             </a>
                         </div>
                         <div className="projects-container__links--pdf">
@@ -560,15 +528,14 @@ const projectsContent = [
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <FontAwesomeIcon icon={faGoogleDrive} /> Voir le
-                                rapport
+                                <FontAwesomeIcon icon={faGoogleDrive} /> View the report
                             </a>
                         </div>
                     </div>
                 </article>
             </>
         ),
-    },
+    },  
 ];
 
-export default projectsContent;
+export default projectsContentEng;
