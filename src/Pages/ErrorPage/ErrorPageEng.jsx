@@ -6,7 +6,7 @@ function ErrorPage() {
     return (
         <div className="error-page">
             <section className="error-page__content">
-                <p>Are you lost? Dont't you worry...</p>
+                <p>Are you lost? Don't you worry...</p>
                 <img
                     src={meOnAHorseInSpace}
                     alt="Me on a horse in space"
