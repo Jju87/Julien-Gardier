@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./header.scss";
 import logoHeader from "../../../Assets/Images/logo.PNG";
 import React, { useState, useEffect } from "react";
-import englishFlag from "../../../Assets/Images/eng-flag.png";
+import frenchFlag from "../../../Assets/Images/fr-flag.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -82,7 +82,7 @@ function Header({ children }) {
                     <li>
                         <Link to="/eng/">
                             <img
-                                src={englishFlag}
+                                src={frenchFlag}
                                 alt="Flag of the United Kingdom"
                                 title="Swith to English language"
                             />
