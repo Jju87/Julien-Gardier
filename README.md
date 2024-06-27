@@ -1,5 +1,7 @@
 # My Web Developer MERN Stack Portfolio
 
+https://julien-gardier.com/eng/
+
 Welcome to my MERN stack web developer portfolio. It showcases my most accomplished projects.
 
 ## Visual Preview for socials
