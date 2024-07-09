@@ -111,6 +111,10 @@ header {
         height: 100px;
         align-items: center;
         justify-content: space-between;
+        @media screen and (min-width: 1600px) {
+            width: 100%;
+            max-width: 1400px;
+        }
         @media screen and (max-width: 1199px) {
             width: 90%;
         }
@@ -122,6 +126,10 @@ header {
             flex-shrink: 0;
             width: 171px;
             height: 50px;
+            @media screen and (min-width: 1600px) {
+                width: 200px;
+                height: 60px;
+            }
             @media screen and (max-width: 1199px) {
                 width: 150px;
                 height: 45px;
@@ -167,6 +175,10 @@ header {
                 font-size: 1.8rem;
                 width: auto;
                 white-space: no-wrap;
+                @media screen and (min-width: 1600px) {
+                    font-size: 2.2rem;
+                    
+                }
                 @media screen and (max-width: 1199px) {
                     font-size: 1.6rem;
                 }
