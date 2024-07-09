@@ -28,6 +28,9 @@
         overflow: hidden;
         position: relative;
         background-color: $background-color;
+        @media screen and (min-width: 1600px) {
+            max-width: 1400px;
+        }
         @media screen and (max-width: 1200px) {
             width: 90%;
         }
@@ -35,6 +38,9 @@
             color: $primary-font-color;
             font-size: 2.5rem;
             overflow: hidden;
+            @media screen and (min-width: 1600px){
+                font-size: 3rem;
+            }
             @media screen and (max-width: 1200px) {
                 font-size: 2.2rem;
             }

@@ -176,13 +176,19 @@
             background-size: cover;
             background-position: center;
             @media screen and (min-width: 1199px) {
-                left: 36%;
+                left: 38%;
             }
             @media screen and (max-width: 1199px) {
                 left: 40%;
             }
-            @media screen and (min-height: 800px) and (max-width: 1199px) {
+            @media screen and (min-height: 1200px) and (max-width: 1024px){
                 left: 36%;
+            }
+            @media screen and (min-height: 800px) and (max-height:1199px)and (max-width: 1199px) {
+                left: 38%;
+            }
+            @media screen and (max-height: 768px) and (max-width: 1024px) {
+                left: 37%;
             }
             @media screen and (min-height: 800px) and (max-width: 768px) {
                 left: 38%;
