@@ -1,5 +1,11 @@
 @import "../../../Styles/variables.scss";
 
+@keyframes heartbeat {
+	50% {
+		transform: scale(1.05);
+	}
+}
+
 footer {
     width: 100%;
     height: 120px;
@@ -49,6 +55,40 @@ footer {
         &--copy p {
             color: $primary-font-color;
             font-size: 1.5rem;
+        }
+        .cv{
+            position: fixed;
+            bottom: 40px;
+            right: 70px;
+            border-radius: 20px;
+            background: $primary-color;
+            transition: transform 500ms ease;
+            transform: translateY(300px);
+            @media screen and (max-width: 1200px) {
+                bottom: 60px;
+                right: 50px;
+            }
+            &.visible{
+            transform: translateY(0);
+            }
+            &.animate-heartbeat{
+            animation: heartbeat 700ms infinite ease;
+            }
+            & button{
+                z-index: 100;
+                font-family: inherit;
+                border: 1px solid transparent;
+                padding: 10px 15px;
+                width: 200px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-align: center;
+                background: transparent;
+                border-radius: 20px;
+                color: white;
+                cursor: pointer;
+
+            }
         }
     }
 }

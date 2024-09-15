@@ -87,8 +87,8 @@ function Footer() {
                 <div className="footer__container--copy">
                     <p>© 2024 - Julien Gardier</p>
                 </div>
-                <a className="cv" target="_blank" href="/CV_Julien-Gardier_FR_2024.pdf">
-                    <button>Télécharger mon CV</button>
+                <a className="cv" target="_blank" href="/CV_Julien-Gardier_English_2024.pdf">
+                    <button>Download my CV</button>
                 </a>
             </div>
         </footer>

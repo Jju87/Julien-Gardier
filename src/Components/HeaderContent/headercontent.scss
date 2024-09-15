@@ -46,6 +46,20 @@
     }
 }
 
+@keyframes colorPulse {
+    0% {
+        color: white;
+    }
+    50% {
+        background: rgba(200, 189, 220, 0.2);
+        backdrop-filter: blur(4px);
+        border: 1px transparent solid;
+    }
+    100% {
+        color: white;
+    }
+}
+
 .header-content {
     width: 75%;
     height: auto;

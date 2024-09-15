@@ -4,7 +4,7 @@ import AproposEng from "../../Layout/English/AproposEng/AproposEng";
 import SkillsDisplayEng from "../../Layout/SkillsDisplay/SkillsDisplayEng";
 import PortfolioEng from "../../Layout/English/PortfolioEng/PortfolioEng";
 import ContactEng from "../../Layout/English/ContactEng/ContactEng";
-import Footer from "../../Layout/Francais/Footer/Footer";
+import FooterEng from "../../Layout/Francais/Footer/FooterEng";
 import "../Accueil/accueil.scss";
 
 import {Helmet} from "react-helmet-async";
@@ -40,7 +40,7 @@ function Home() {
             <SkillsDisplayEng />
             <PortfolioEng />
             <ContactEng />
-            <Footer />
+            <FooterEng />
         </div>
     );
 }
