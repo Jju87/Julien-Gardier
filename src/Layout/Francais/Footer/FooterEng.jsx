@@ -13,29 +13,22 @@ function Footer() {
             (entries) => {
                 const entry = entries[0];
                 if (entry.isIntersecting) {
-                    // Si le footer devient visible
                     if (cvBtn) {
                         cvBtn.classList.add("visible");
-
-                        // Attendre que le bouton soit complètement visible avant d'ajouter l'animation heartbeat
                         setTimeout(() => {
                             cvBtn.classList.add("animate-heartbeat");
-                        }, 700); // Attente après la transition avant d'ajouter l'animation
+                        }, 700); 
                     }
                 } else {
-                    // Si le footer n'est plus visible
                     if (cvBtn) {
-                        // Lancer la transition de disparition
                         cvBtn.classList.remove("animate-heartbeat");
-
-                        // Retarder la suppression de la classe visible pour laisser le temps à la transition de s'exécuter
                         setTimeout(() => {
                             cvBtn.classList.remove("visible");
-                        }, 500); // Le délai correspond à la durée de la transition CSS (500ms)
+                        }, 500); 
                     }
                 }
             },
-            { threshold: 0.1 } // Le seuil de visibilité à 10% du footer
+            { threshold: 0.8 } 
         );
 
         if (footer) {

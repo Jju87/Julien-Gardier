@@ -71,7 +71,9 @@ footer {
                 right: 50px;
             }
             @media screen and (max-width: 768px) {
-                right: 20px;
+                right: auto;
+                bottom: 130px;
+
             }
             &.visible{
             transform: translateY(0);
