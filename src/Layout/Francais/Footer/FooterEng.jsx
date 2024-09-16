@@ -2,6 +2,7 @@ import "./footer.scss";
 import React, { useEffect } from "react";
 import { faLinkedin, faGithub, faCodepen } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
     useEffect(() => {
@@ -88,7 +89,7 @@ function Footer() {
                     <p>© 2024 - Julien Gardier</p>
                 </div>
                 <a className="cv" target="_blank" href="/CV_Julien-Gardier_English_2024.pdf">
-                    <button>Download my CV</button>
+                    <button> <FontAwesomeIcon icon= {faFileArrowDown}/> <span>Download my</span> CV  </button>
                 </a>
             </div>
         </footer>
