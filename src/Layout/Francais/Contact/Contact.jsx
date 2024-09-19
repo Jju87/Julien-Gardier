@@ -186,7 +186,7 @@ function Contact() {
                                     rel="noopener noreferrer"
                                 >
                                     <span>
-                                        Planifiez un appel{" "}
+                                        Planifier un appel{" "}
                                         <FontAwesomeIcon
                                             icon={faComments}
                                             className="contact__content--links-phone-icon"

@@ -94,6 +94,7 @@ footer {
                 border-radius: 20px;
                 color: white;
                 cursor: pointer;
+                line-height: 20px; // Correspond à la hauteur du bouton pour stabiliser la hauteur du texte
                 @media screen and (max-width: 768px) {
                     width: 60px;
                 }
