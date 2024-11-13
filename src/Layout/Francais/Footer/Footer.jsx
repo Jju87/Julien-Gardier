@@ -17,18 +17,18 @@ function Footer() {
                         cvBtn.classList.add("visible");
                         setTimeout(() => {
                             cvBtn.classList.add("animate-heartbeat");
-                        }, 700); 
+                        }, 400); 
                     }
                 } else {
                     if (cvBtn) {
                         cvBtn.classList.remove("animate-heartbeat");
                         setTimeout(() => {
                             cvBtn.classList.remove("visible");
-                        }, 500); 
+                        }, 150); 
                     }
                 }
             },
-            { threshold: 0.8 } 
+            { threshold: 0.7 } //
         );
 
         if (footer) {
