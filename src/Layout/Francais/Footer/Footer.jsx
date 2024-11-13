@@ -8,27 +8,75 @@ function Footer() {
     useEffect(() => {
         const footer = document.querySelector("footer");
         const cvBtn = document.querySelector(".cv");
+        let animationTimeoutId = null;
+        let visibilityTimeoutId = null;
+        let isAnimating = false;
+
+        const clearTimeouts = () => {
+            if (animationTimeoutId) {
+                clearTimeout(animationTimeoutId);
+                animationTimeoutId = null;
+            }
+            if (visibilityTimeoutId) {
+                clearTimeout(visibilityTimeoutId);
+                visibilityTimeoutId = null;
+            }
+        };
+
+        const showButton = () => {
+            if (!cvBtn) return;
+            
+            clearTimeouts();
+            isAnimating = true;
+            
+            // D'abord, on rend le bouton visible
+            cvBtn.classList.add("visible");
+            
+            // Ensuite, on ajoute l'animation de battement
+            animationTimeoutId = setTimeout(() => {
+                if (cvBtn.classList.contains("visible")) {
+                    cvBtn.classList.add("animate-heartbeat");
+                }
+                isAnimating = false;
+            }, 700);
+        };
+
+        const hideButton = () => {
+            if (!cvBtn) return;
+            
+            clearTimeouts();
+            isAnimating = true;
+            
+            // D'abord, on arrête l'animation de battement
+            cvBtn.classList.remove("animate-heartbeat");
+            
+            // Ensuite, on cache le bouton
+            visibilityTimeoutId = setTimeout(() => {
+                cvBtn.classList.remove("visible");
+                isAnimating = false;
+            }, 500);
+        };
 
         const observerFooter = new IntersectionObserver(
             (entries) => {
                 const entry = entries[0];
+                
+                // Si une animation est déjà en cours, on l'annule
+                if (isAnimating) {
+                    clearTimeouts();
+                }
+                
                 if (entry.isIntersecting) {
-                    if (cvBtn) {
-                        cvBtn.classList.add("visible");
-                        setTimeout(() => {
-                            cvBtn.classList.add("animate-heartbeat");
-                        }, 400); 
-                    }
+                    showButton();
                 } else {
-                    if (cvBtn) {
-                        cvBtn.classList.remove("animate-heartbeat");
-                        setTimeout(() => {
-                            cvBtn.classList.remove("visible");
-                        }, 150); 
-                    }
+                    hideButton();
                 }
             },
-            { threshold: 0.7 } //
+            { 
+                threshold: 0.8,
+                // Ajouter un délai avant de déclencher l'observateur
+                rootMargin: "20px" 
+            }
         );
 
         if (footer) {
@@ -36,10 +84,11 @@ function Footer() {
         }
 
         return () => {
+            clearTimeouts();
             if (footer) observerFooter.unobserve(footer);
         };
     }, []);
-
+    
     return (
         <footer>
             <div className="footer__container">
